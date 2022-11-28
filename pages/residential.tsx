@@ -9,7 +9,7 @@ const Residential = () => {
   return (
     <div>
       <Head>
-        <title>Solar Pro USA</title>
+        <title>Solar Pro USA - Residencial</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
@@ -96,7 +96,7 @@ const Residential = () => {
             headerColor="financing!"
             button={true}/>
         </div>
-        <div className="col-start-1 col-end-5 flex flex-col justify-center p-20 space-y-6">
+        <div className="col-start-1 col-end-5 flex flex-col justify-center p-24 space-y-6">
           <div className="text-3xl font-bold flex">
             <h2>How Solar</h2>
             <h2 className="secondary-font-color">works</h2>
@@ -139,7 +139,7 @@ const Residential = () => {
           </div>
         </div>
         <div className="col-start-5 col-end-9">
-          <img src="https://images.unsplash.com/photo-1542336391-ae2936d8efe4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="how solar works" />
+          <img className="h-screen" src="https://images.unsplash.com/photo-1542336391-ae2936d8efe4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="how solar works" />
         </div>
       </section>
 

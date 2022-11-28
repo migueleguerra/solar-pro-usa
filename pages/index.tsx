@@ -18,7 +18,8 @@ const Home: NextPage = () => {
       {/* Hero section */}
 
       <Hero 
-        heading='Modern And Efficient Solar Roof Experts' 
+        heading='Modern And Efficient Solar Roof'
+        headingColor='Experts' 
         message='Solar Pro company strives to innovate, evolve, and adapt to the modern world' />
 
       {/* Buisness Goals section */}
@@ -64,12 +65,12 @@ const Home: NextPage = () => {
               imageUrl='https://images.unsplash.com/photo-1594818379496-da1e345b0ded?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80'
               header='Comercial'
               message='With a large portfolio of solar-powered, commercial clients, Solar Pro has a proven track record in providing customized...'
-              linkHref='services/comercial'/>
+              linkHref='comercial'/>
             <ServiceCard 
               imageUrl='https://images.unsplash.com/photo-1624397640148-949b1732bb0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80'
               header='Maintenance'
               message='These systems can last for decades and provide your home with an abundant source of energy, but panels can lose efficiency...'
-              linkHref='services/maintenance'/>
+              linkHref='maintenance'/>
           </div>
         </div>
       </section>
