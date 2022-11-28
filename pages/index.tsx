@@ -23,13 +23,13 @@ const Home: NextPage = () => {
 
       {/* Buisness Goals section */}
 
-      <section className='grid grid-cols-8 relative'>
+      <section className='grid grid-cols-8 relative pb-40'>
         <div className='absolute -top-10 col-start-2 col-end-8'>
           <CallToAction
             header='We believe that these principles will propel us into a new era, as people, as a community as a new world.'
             message='Our team of certified experts is here to tailor each project to your specific budget and energy needs. Whether you want to convert your business to green energy, need storage solutions, need assistance with design, or simply want to avoid your monthly utility payments, Solar Pro can help.' />
         </div>
-        <h2 className='mt-60 mb-10 p-6 col-start-3 col-span-4 primary-font-color text-3xl font-bold text-center'>Our approach to reach your business goals</h2>
+        <h2 className='mt-80 p-6 col-start-3 col-span-4 primary-font-color text-3xl font-bold text-center'>Our approach to reach your business goals</h2>
         <div className='col-start-2 col-span-6'>
           <div className='grid grid-cols-3'>
             <MainCard 
@@ -76,14 +76,14 @@ const Home: NextPage = () => {
 
       {/* Feedback section */}
 
-      <section className='pb-40 relative gray-bg-color grid grid-cols-8 gap-4 text-center'>
+      <section className='pb-60 relative gray-bg-color grid grid-cols-8 gap-4 text-center'>
         <div className='absolute -top-20 col-start-2 col-end-8 w-full'>
           <CallToAction
             header='We can help you calculate'
             headerColor='financing!'
             button={true}/>
         </div>
-        <h2 className='col-start-3 col-span-4 mt-60 text-3xl primary-font-color font-bold'>Our Clients Speak</h2>
+        <h2 className='col-start-3 col-span-4 mt-80 text-3xl primary-font-color font-bold'>Our Clients Speak</h2>
         <p className='col-start-3 col-span-4 primary-font-color text-xl'>We have been working with clients around the world</p>
         <div className='col-start-2 col-span-6'>
           <div className='grid grid-cols-3 gap-4'>
@@ -106,7 +106,7 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      <section className='grid grid-cols-8 py-20'>
+      <section className='grid grid-cols-8 py-20 my-20'>
         <div className='col-start-2 col-end-8'>
           <VideoSection />
         </div>

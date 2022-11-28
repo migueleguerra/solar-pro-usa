@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 interface HeroParams {
     heading: string,
     message: string,
@@ -10,7 +12,7 @@ export const Hero = ({heading, message}: HeroParams) => {
         <div className="col-start-2 col-span-3 z-[1]">
             <h1 className="text-5xl font-bold primary-font-color">{heading}</h1>
             <p className="py-5 text-xl font-normal primary-font-color">{message}</p>
-            <button className="px-8 py-2 secondary-bg-color text-white rounded-md">Get a Quote</button>
+            <Link href="/contact" className="px-8 py-2 secondary-bg-color text-white rounded-md">Get a Quote</Link>
         </div>
     </header>
   )
