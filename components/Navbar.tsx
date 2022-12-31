@@ -46,7 +46,7 @@ export const Navbar = () => {
         {/* Mobile Menu */}
         <div
           onClick={handleNav}
-          className="col-start-[full-end] pr-4 md:hidden z-10"
+          className="col-start-[center-end] flex justify-end pr-4 md:hidden z-10"
         >
           {nav ? (
             <AiOutlineClose size={20} />
