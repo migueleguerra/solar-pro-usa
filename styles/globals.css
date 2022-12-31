@@ -2,43 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
 html {
-    scroll-behavior: smooth;
-    font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(12rem, 1fr) [center-start] repeat(
+      9,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] minmax(12rem, 1fr) [full-end];
 }
 
 .primary-font-color {
-    color: #203456;
+  color: #203456;
 }
 
 .secondary-font-color {
-    color: #F26622;
+  color: #f26622;
 }
 
 .dark-gray-font-color {
-    color: #5E6282;
+  color: #5e6282;
 }
 
 .primary-bg-color {
-    background-color: #203456;
+  background-color: #203456;
 }
 
 .secondary-bg-color {
-    background-color: #F26622;
+  background-color: #f26622;
 }
 
 .dark-gray-bg-color {
-    background-color: #5E6282;
+  background-color: #5e6282;
 }
 
 .gray-bg-color {
-    background-color: #F9FAFB;
+  background-color: #f9fafb;
 }
 
 .custom-img {
-    background-image: url('https://images.unsplash.com/flagged/photo-1566838634698-48b165cb0a9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+  background-image: url("https://images.unsplash.com/flagged/photo-1566838634698-48b165cb0a9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
 }
 
 .custom-img-gradient {
-    background: linear-gradient(100.23deg, #FFFFFF 18.57%, #FFFFFF 29.42%, rgba(255, 255, 255, 0.95) 35.94%, rgba(255, 255, 255, 0.87) 42.92%, rgba(255, 255, 255, 0.68) 50.38%, rgba(255, 255, 255, 0) 75.47%);
+  background: linear-gradient(
+    100.23deg,
+    #ffffff 18.57%,
+    #ffffff 29.42%,
+    rgba(255, 255, 255, 0.95) 35.94%,
+    rgba(255, 255, 255, 0.87) 42.92%,
+    rgba(255, 255, 255, 0.68) 50.38%,
+    rgba(255, 255, 255, 0) 75.47%
+  );
+}
+
+@media only screen and (max-width: 768px) {
+  .custom-img-gradient {
+    background: linear-gradient(
+      100.23deg,
+      #ffffff 18.57%,
+      #ffffff 29.42%,
+      rgba(255, 255, 255, 1) 35.94%,
+      rgba(255, 255, 255, 1) 42.92%,
+      rgba(255, 255, 255, 1) 50.38%,
+      rgba(255, 255, 255, 0.5) 95%
+    );
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr) [center-start] repeat(
+        9,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      )
+      [center-end] minmax(6rem, 1fr) [full-end];
+  }
 }
