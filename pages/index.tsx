@@ -59,7 +59,7 @@ const Home: NextPage = () => {
 
       {/* Services section */}
 
-      <section className="grid col-[full-start/full-end] md:col-[center-start/center-end] px-4 md:px-0 text-center">
+      <section className="grid col-[full-start/full-end] md:col-[center-start/center-end] px-2 md:px-0 text-center">
         <h2 className="text-3xl font-bold primary-font-color pb-[4rem]">
           Our Services
         </h2>
