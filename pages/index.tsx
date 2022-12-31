@@ -32,7 +32,7 @@ const Home: NextPage = () => {
         />
       </div>
 
-      <section className="grid col-[full-start/full-end] md:col-[center-start/center-end] pb-[10rem]">
+      <section className="grid col-[full-start/full-end] md:col-[center-start/center-end] pb-[5rem]">
         <h2 className="primary-font-color text-3xl font-bold text-center py-[4rem] px-8 md:px-0">
           Our approach to reach your business goals
         </h2>
@@ -59,12 +59,12 @@ const Home: NextPage = () => {
 
       {/* Services section */}
 
-      <section className="grid col-[full-start/full-end] md:col-[center-start/center-end] px-8 md:px-0 pb-[5rem] text-center">
+      <section className="grid col-[full-start/full-end] md:col-[center-start/center-end] px-4 md:px-0 text-center">
         <h2 className="text-3xl font-bold primary-font-color pb-[4rem]">
           Our Services
         </h2>
         <div>
-          <div className="grid lg:grid-cols-3 gap-8 sm:gap-4">
+          <div className="grid lg:grid-cols-3 gap-8 sm:gap-4 px-8 lg:px-0">
             <ServiceCard
               imageUrl="https://images.unsplash.com/flagged/photo-1566838803980-56bfa5300e8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
               header="Residential"
@@ -97,7 +97,7 @@ const Home: NextPage = () => {
         />
       </div>
 
-      <section className="col-[full-start/full-end] pt-[15rem] pb-[10rem] md:pb-[15rem] container gray-bg-color text-center">
+      <section className="col-[full-start/full-end] pt-[15rem] pb-[5rem] container gray-bg-color text-center">
         <div className="grid col-[full-start/full-end] md:col-[center-start/center-end] px-8 md:px-0 gap-8">
           <h2 className="text-3xl primary-font-color font-bold">
             Our Clients Speak
@@ -106,24 +106,31 @@ const Home: NextPage = () => {
             Giving the best service and experience to our customers
           </p>
           <div>
-            <div className="grid md:grid-cols-3 gap-8 sm:gap-4">
+            <div className="grid xl:grid-cols-3 gap-8 sm:gap-4">
               <FeedbackCard
-                heading="Efficient Collaborating"
-                message="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus "
-                name="Jane Cooper"
-                jobTitle="CEO at ABC Corporation"
+                heading="Highly Recommend"
+                message="We are so pleased with our choice to go with Solar Pro to install our new system. 
+                From start to finish this company was a true pleasure to work with. 
+                Their sales team was amazing, and gave us straight forward honest advice and helped us design a system that worked for our situation. 
+                Highly recommend to anyone looking to go solar"
+                name="Ansley Benjamin"
               />
               <FeedbackCard
                 heading="Intuitive Design"
-                message="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus "
-                name="Jane Cooper"
-                jobTitle="CEO at ABC Corporation"
+                message="Solar Pro was fantastic! They answered all of our questions and kept us up to date on the progress of our project. 
+                They were very patient with us while getting ready to close. 
+                I would definately recommend Solar Pro for any installation in Georgia. 
+                They had the best customer service!"
+                name="Julis Melo"
               />
               <FeedbackCard
                 heading="Mindblowing Service"
-                message="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus "
-                name="Jane Cooper"
-                jobTitle="CEO at ABC Corporation"
+                message="I am very proud of my new solar panels. 
+                Solar Pro was very professional throughout the entire process. 
+                Jim was very prompt and knowledgeable which made my experience a pleasant one. 
+                I never felt pressured and Jim took the time to really listen to me. 
+                He answered all of my questions. Im so happy I called Solar Pro!"
+                name="Kelly Smith"
               />
             </div>
           </div>

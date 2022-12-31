@@ -16,7 +16,7 @@ export const VideoSection = () => {
         </p>
         <div className="py-4">
           <input
-            className="border pl-2 w-2/3 py-2 mr-4 rounded-md"
+            className="border pl-2 md:w-2/3 lg:w-1/2 2xl:w-2/3 py-2 mr-4 rounded-md"
             placeholder="Enter your email"
           ></input>
           <button className="px-6 py-2 primary-bg-color text-white rounded-md">

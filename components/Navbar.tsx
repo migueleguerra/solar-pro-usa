@@ -10,36 +10,44 @@ export const Navbar = () => {
   };
 
   return (
-    <div className="fixed py-4 z-[3] bg-white shadow-md">
-      <div className="grid gap-4 grid-cols-8 items-center primary-font-color">
-        <Link className="col-start-2 w-60" href="/">
+    <div className="fixed py-4 z-[3] bg-white shadow-md w-full">
+      <div className="grid container items-center primary-font-color">
+        <Link className="lg:col-[center-start] w-60" href="/">
           <img src="solar-pro-logo.png" alt="solar pro logo" />
         </Link>
-        <ul className="hidden sm:flex items-center justify-end col-start-4 col-span-4">
-          <li className="px-4 font-bold">
+        <ul className="grid gap-4 md:flex items-center justify-end col-start-5 text-xs lg:text-base lg:col-start-4 lg:col-span-7 col-span-7 pr-2 lg:pr-0 hidden">
+          <li className="font-bold">
             <Link href="/aboutus">About Us</Link>
           </li>
-          <li className="px-4 font-bold">
+          <li className="font-bold">
             <Link href="/services">Services</Link>
           </li>
-          <li className="px-4 font-bold">
+          <li className="font-bold">
             <Link href="/benefits">Benefits</Link>
           </li>
-          <li className="px-4 font-bold">
-            <Link href="/warranty">Warranty</Link>
-          </li>
-          <li className="">
+          <li>
             <Link
               href="/contact"
-              className="px-8 py-2 primary-bg-color text-white rounded-md"
+              className="px-4 py-2 primary-bg-color text-white rounded-md"
             >
               Contact Us
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/contact"
+              className="px-4 py-2 secondary-bg-color text-white rounded-md"
+            >
+              Pay Service
             </Link>
           </li>
         </ul>
 
         {/* Mobile Menu */}
-        <div onClick={handleNav} className="block sm:hidden z-10">
+        <div
+          onClick={handleNav}
+          className="col-start-[full-end] pr-4 md:hidden z-10"
+        >
           {nav ? (
             <AiOutlineClose size={20} />
           ) : (
@@ -49,8 +57,8 @@ export const Navbar = () => {
         <div
           className={
             nav
-              ? "sm:hidden absolute inset-0 flex justify-center items-center w-full h-screen bg-white text-center"
-              : "sm:hidden absolute left-[-100%] flex justify-center items-center w-full h-screen bg-white text-center"
+              ? "md:hidden absolute inset-0 flex justify-center items-center w-full h-screen bg-white text-center"
+              : "md:hidden absolute left-[-100%] flex justify-center items-center w-full h-screen bg-white text-center"
           }
         >
           <ul>
@@ -63,11 +71,21 @@ export const Navbar = () => {
             <li className="p-4 text-4xl hover:text-orange-600">
               <Link href="/benefits">Benefits</Link>
             </li>
-            <li className="p-4 text-4xl hover:text-orange-600">
-              <Link href="/warranty">Warranty</Link>
+            <li className="p-4 text-3xl">
+              <Link
+                href="/contact"
+                className="px-8 py-2 primary-bg-color text-white rounded-md"
+              >
+                Contact Us
+              </Link>
             </li>
-            <li className="p-4 text-4xl hover:text-orange-600">
-              <button>Contact Us</button>
+            <li className="p-4 text-3xl">
+              <Link
+                href="/contact"
+                className="px-8 py-2 secondary-bg-color text-white rounded-md"
+              >
+                Pay Service
+              </Link>
             </li>
           </ul>
         </div>

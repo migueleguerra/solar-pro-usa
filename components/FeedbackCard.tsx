@@ -2,24 +2,19 @@ interface FeedbackCardProms {
   heading: string;
   message: string;
   name: string;
-  jobTitle: string;
 }
 
-export const FeedbackCard = ({
-  heading,
-  message,
-  name,
-  jobTitle,
-}: FeedbackCardProms) => {
+export const FeedbackCard = ({ heading, message, name }: FeedbackCardProms) => {
   return (
     <div className="grid">
-      <div className="shadow-md rounded-md p-4 my-10 bg-white dark-gray-font-color">
+      <div className="relative shadow-xl rounded-md p-4 my-10 bg-white dark-gray-font-color feedback-speech">
         <p className="p-4 font-bold">{heading}</p>
-        <p className="p-2">{message}</p>
+        <p className="p-2 h-full 2xl:h-[max(12rem,25vh)] xl:h-[max(15rem,35vh)]">
+          {message}
+        </p>
       </div>
       <div className="primary-font-color">
         <p className="font-bold">{name}</p>
-        <p>{jobTitle}</p>
       </div>
     </div>
   );

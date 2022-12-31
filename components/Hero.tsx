@@ -10,7 +10,7 @@ export const Hero = ({ heading, headingColor, message }: HeroParams) => {
   return (
     <header className="grid col-[full-start/full-end] relative items-center h-screen bg-fixed bg-center bg-cover custom-img">
       <div className="absolute inset-0 custom-img-gradient" />
-      <div className="w-full p-8 z-[1] lg:pl-[12rem] lg:w-1/2 md:w-3/4 md:pl-[6rem]">
+      <div className="w-full p-10 z-[1] xl:pl-[12rem] lg:w-1/2 md:w-3/4 md:pl-[6rem]">
         <h1 className="text-5xl font-bold primary-font-color">
           {heading} <span className="secondary-font-color">{headingColor}</span>
         </h1>
