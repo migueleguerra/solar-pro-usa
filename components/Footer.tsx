@@ -48,7 +48,7 @@ export const Footer = () => {
           <Link href="/">Video record</Link>
         </li>
       </ul>
-      <hr className="col-start-2 col-end-8 my-10 gray-bg-color" />ß
+      <hr className="col-start-2 col-end-8 my-10 gray-bg-color" />
       <div className="col-start-2 flex items-center pb-10">
         <p className="text-xs text-white">SolarProUSA 2021.</p>
       </div>
