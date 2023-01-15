@@ -36,7 +36,17 @@ const Home: NextPage = () => {
         <h2 className="primary-font-color text-3xl font-bold text-center py-[4rem] px-8 md:px-0">
           Our approach to reach your business goals
         </h2>
-        <div>
+        <div className="relative">
+          <img
+            className="absolute left-[25%] hidden md:block md:w-[15%] md:top-[25%] lg:top-[30%]"
+            src="line-down.svg"
+            alt="line-down"
+          />
+          <img
+            className="absolute left-[60%] hidden md:block md:w-[15%] md:top-[10%] lg:top-[20%]"
+            src="line-up.svg"
+            alt="line-up"
+          />
           <div className="grid sm:grid-cols-3 sm:gap-8">
             <MainCard
               imgSrc="shield.svg"
@@ -44,12 +54,12 @@ const Home: NextPage = () => {
               message="We offer maximum expertise and the leading material in the market"
             />
             <MainCard
-              imgSrc="money-bag.svg"
+              imgSrc="wallet.svg"
               header="Save Money"
               message="Generate your own energy and save. Take advantage of the solar incentives to achieve a quick ROI"
             />
             <MainCard
-              imgSrc="lightbulb.svg"
+              imgSrc="eco.svg"
               header="Eco Friendly"
               message="Environmental - Produce trusted clean energy and reduce your carbon footprint"
             />
@@ -105,8 +115,8 @@ const Home: NextPage = () => {
           <p className="primary-font-color text-xl">
             Giving the best service and experience to our customers
           </p>
-          <div>
-            <div className="grid xl:grid-cols-3 gap-8 sm:gap-4">
+          <div className="relative">
+            <div className="grid xl:grid-cols-3 gap-8 sm:px-10 xl:p-0 sm:gap-4">
               <FeedbackCard
                 heading="Highly Recommend"
                 message="We are so pleased with our choice to go with Solar Pro to install our new system. 
@@ -138,9 +148,7 @@ const Home: NextPage = () => {
       </section>
 
       <section className="col-[full-start/full-end] md:col-[center-start/center-end] py-[5rem] lg:py-[10rem]">
-        <div>
-          <VideoSection />
-        </div>
+        <VideoSection />
       </section>
     </div>
   );

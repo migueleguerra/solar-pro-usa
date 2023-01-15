@@ -1,8 +1,31 @@
+import { useState } from "react";
+import { FiUpload } from "react-icons/fi";
+import { AiOutlineFileDone } from "react-icons/ai";
+
 function Contact() {
+  const [uploading, setUploading] = useState(false);
+  const [selectedFile, setSelectedFile] = useState<File>();
+
+  const onChange = (target: File) => {
+    if (target) {
+      setSelectedFile(target);
+    }
+  };
+
+  const handleUpload = async () => {
+    setUploading(true);
+    try {
+      if (!selectedFile) return;
+      const fromData = new FormData();
+    } catch (error: any) {
+      console.log(error.message);
+    }
+  };
+
   return (
-    <form className="flex flex-col pt-40 mb-24 px-20 primary-font-color mx-auto max-w-2xl space-y-4">
+    <form className="flex flex-col pt-40 mb-24 sm:px-20 primary-font-color mx-auto max-w-2xl space-y-4">
       <h3 className="text-3xl font-bold text-center">Let's work together</h3>
-      <p className="text-center">
+      <p className="text-center px-4 sm:px-0">
         We'd love to hear from you! Send us a message using the form, or email
         us.
       </p>
@@ -96,9 +119,16 @@ function Contact() {
         </div>
       </div>
 
-      <div className="px-8 sm:px-0">
+      <div className="px-8 sm:px-0 flex flex-col">
         <label className="text-sm font-bold">Drop your electricity bill</label>
-        <input className="border py-1 px-2 rounded-md w-full" />
+        <input type="file" hidden />
+        <div className="flex aspect-video rounded border-dashed border-2 h-20 items-center cursor-pointer">
+          {selectedFile ? (
+            <AiOutlineFileDone className="m-auto top-5" size={30} />
+          ) : (
+            <FiUpload className="m-auto top-5 opacity-30" size={30} />
+          )}
+        </div>
       </div>
 
       <div className="px-8 sm:px-0">
