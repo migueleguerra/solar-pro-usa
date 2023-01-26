@@ -14,39 +14,39 @@ export const HeroServices = ({
   reverse = false,
 }: HeroServicesParams) => {
   return (
-    <div className="grid grid-cols-8 gap-5">
+    <div className="grid grid-cols-2">
       {reverse ? (
         <>
-          <div className="col-start-2 col-end-5 flex flex-col justify-center space-y-6 items-center">
-            <h1 className="text-4xl font-bold primary-font-color">
+          <div className="col-start-1 col-end-9 xl:ml-[23%] lg:ml-[10%] lg:col-start-1 lg:col-span-1 flex flex-col justify-center lg:pl-10 p-8 space-y-6 text-center xl:pt-8 lg:pt-[10rem] lg:text-left primary-font-color">
+            <h1 className="text-4xl font-bold">
               {heading}{" "}
               <span className="secondary-font-color">{headingColor}</span>
             </h1>
-            <p className="py-5 text-lg font-normal primary-font-color">
-              {message}
-            </p>
+            <p className="py-5 text-lg font-normal">{message}</p>
           </div>
-          <div className="col-start-5 col-span-4">
-            <img className="w-full h-screen" src={imageUrl} alt="residential" />
+          <div className="col-start-2 col-span-1">
+            <img
+              className="w-full h-screen lg:block hidden"
+              src={imageUrl}
+              alt="residential"
+            />
           </div>
         </>
       ) : (
         <>
-          <div className="col-start-1 col-end-9 lg:col-start-1 lg:col-span-4 lg:h-screen h-[30rem] overflow-hidden">
+          <div className="col-start-1 col-end-9 lg:col-start-1 lg:col-span-1 lg:h-screen h-[30rem] overflow-hidden">
             <img
               className="w-screen md:w-full object-cover md:h-screen lg:translate-y-0 translate-y-[-10rem]"
               src={imageUrl}
               alt="residential"
             />
           </div>
-          <div className="col-start-1 col-end-9 lg:col-start-5 lg:col-span-4 flex flex-col justify-center lg:pl-10 p-8 space-y-6 text-center md:text-left">
-            <h1 className="text-4xl font-bold primary-font-color">
+          <div className="col-start-1 col-end-9 lg:mr-[20%] lg:col-start-2 lg:col-span-1 flex flex-col justify-center lg:pl-10 p-8 space-y-6 text-center lg:text-left primary-font-color">
+            <h1 className="text-4xl font-bold">
               {heading}{" "}
               <span className="secondary-font-color">{headingColor}</span>
             </h1>
-            <p className="py-5 text-lg font-normal primary-font-color">
-              {message}
-            </p>
+            <p className="py-5 text-lg font-normal">{message}</p>
           </div>
         </>
       )}

@@ -13,7 +13,7 @@ const Residential = () => {
 
       {/* Hero Services */}
 
-      <section className="col-[full-start/full-end] lg:col-[full-start/center-end]">
+      <section className="col-[full-start/full-end]">
         <HeroServices
           imageUrl="https://images.unsplash.com/photo-1605980413988-9ff24c537935?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
           heading="Residential"
@@ -70,7 +70,7 @@ const Residential = () => {
             <span className="secondary-font-color">Best Warranty</span>
           </h2>
         </div>
-        <div className="px-8 md:p-8">
+        <div className="px-8">
           <img
             className="rounded-md shadow-xl"
             src="https://images.unsplash.com/flagged/photo-1566838634698-48b165cb0a9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
@@ -88,9 +88,9 @@ const Residential = () => {
           </p>
           <Link
             className="px-8 py-2 secondary-bg-color text-white rounded-md"
-            href="contact"
+            href="solarAndStorage"
           >
-            Get a quote
+            Know more
           </Link>
         </div>
         <div className="p-8 flex flex-col space-y-4 justify-center items-start lg:row-start-3">
@@ -107,17 +107,17 @@ const Residential = () => {
             className="px-8 py-2 secondary-bg-color text-white rounded-md"
             href="contact"
           >
-            Get a quote
+            Know more
           </Link>
         </div>
-        <div className="px-8 md:p-8 row-start-4 lg:row-start-3">
+        <div className="px-8 row-start-4 lg:row-start-3">
           <img
             className="rounded-md shadow-xl"
             src="https://images.unsplash.com/photo-1630608354129-6a7704150401?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
             alt="solar panels"
           />
         </div>
-        <div className="px-8 md:p-8">
+        <div className="px-8">
           <img
             className="rounded-md shadow-xl"
             src="https://images.unsplash.com/photo-1624397640148-949b1732bb0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
@@ -138,7 +138,7 @@ const Residential = () => {
             className="px-8 py-2 secondary-bg-color text-white rounded-md"
             href="contact"
           >
-            Get a quote
+            Know more
           </Link>
         </div>
       </section>
@@ -153,8 +153,8 @@ const Residential = () => {
 
       {/* How it works? */}
 
-      <section className="grid col-[full-start/full-end] lg:col-[center-start/full-end] grid-cols-2 primary-font-color lg:py-0 py-[5rem]">
-        <div className="flex flex-col lg:items-start items-center col-start-1 col-span-2 lg:col-span-1 justify-center space-y-6 lg:px-[4rem] lg:pr-[4rem]">
+      <section className="grid col-[full-start/full-end] lg:col-[center-start/full-end] grid-cols-2 primary-font-color lg:py-0 py-[2rem]">
+        <div className="flex flex-col lg:items-start items-center col-start-1 col-span-2 lg:col-span-1 justify-center space-y-6 px-[2rem] lg:pt-[4rem] lg:pr-[4rem]">
           <div className="text-3xl font-bold flex">
             <h2>
               How Solar <span className="secondary-font-color">works</span>

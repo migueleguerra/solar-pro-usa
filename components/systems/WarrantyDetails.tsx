@@ -8,14 +8,12 @@ export const WarrantyDetails = ({
   message,
 }: WarrantyDetailsParams) => {
   return (
-    <div className="grid grid-cols-8 gap-5 primary-font-color">
-      <h3 className="col-start-1 col-end-9 text-center text-3xl font-bold">
-        {heading}
-      </h3>
-      <p className="col-start-2 col-end-8 text-center text-lg">{message}</p>
-      <div className="col-start-2 col-end-8 p-10 grid grid-cols-3 gap-4">
-        <div className="flex flex-col gap-4">
-          <div className="flex items-center gap-4 font-bold">
+    <div className="flex flex-col space-y-[4rem] primary-font-color lg:px-0 px-[2rem]">
+      <h3 className="text-center text-3xl font-bold">{heading}</h3>
+      <p className="text-center text-lg">{message}</p>
+      <div className="grid lg:grid-cols-3 lg:gap-4 lg:px-[4rem] gap-[4rem]">
+        <div className="flex flex-col space-y-[1rem]">
+          <div className="flex items-center space-x-[1rem] font-bold">
             <img src="system/system-solar.png" alt="solar systems" />
             <h4>Typical solar systems</h4>
           </div>
@@ -26,8 +24,8 @@ export const WarrantyDetails = ({
             one). CertainTeed offers an all-in-one warranty solution.
           </p>
         </div>
-        <div className="flex flex-col gap-4">
-          <div className="flex items-center gap-4 font-bold">
+        <div className="flex flex-col space-y-[1rem]">
+          <div className="flex items-center space-x-[1rem] font-bold">
             <img src="system/system-manufacturers.png" alt="manufacturers" />
             <h4>Most solar equipment manufacturers</h4>
           </div>
@@ -39,8 +37,8 @@ export const WarrantyDetails = ({
             in business.
           </p>
         </div>
-        <div className="flex flex-col gap-4">
-          <div className="flex items-center gap-4 font-bold">
+        <div className="flex flex-col space-y-[1rem]">
+          <div className="flex items-center space-x-[1rem] font-bold">
             <img src="system/system-warranties.png" alt="warranties" />
             <h4>Typical solar warranties provide</h4>
           </div>
@@ -51,7 +49,7 @@ export const WarrantyDetails = ({
           </p>
         </div>
       </div>
-      <div className="col-start-1 col-end-9 text-md flex justify-center gap-2">
+      <div className="text-md flex lg:flex-row lg:space-x-[1rem] flex-col justify-center">
         <p className="font-bold">Have a CertainTeed roof?</p>
         <p>
           You could have both your solar and roof covered by the same company.
