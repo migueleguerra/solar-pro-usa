@@ -63,7 +63,12 @@ const Residential = () => {
 
       {/* Premium Solar Roof */}
 
-      <section className="grid pb-[5rem] lg:pb-0 col-[full-start/full-end] md:col-[center-start/center-end] md:grid-rows-7 lg:grid-cols-2 primary-font-color gap-4">
+      <section className="grid pb-[5rem] lg:pb-0 col-[full-start/full-end] md:col-[center-start/center-end] md:grid-rows-7 lg:grid-cols-2 primary-font-color gap-4 relative">
+        <img
+          className="absolute w-[7rem] left-[-10rem] top-[15rem]"
+          src="dots.svg"
+          alt="dots"
+        />
         <div className="py-[4rem] text-3xl font-bold text-center px-[2rem] lg:col-start-1 lg:col-span-2">
           <h2>
             Premium Solar Roof Systems, Backed By The Industry's{" "}
@@ -88,7 +93,7 @@ const Residential = () => {
           </p>
           <Link
             className="px-8 py-2 secondary-bg-color text-white rounded-md"
-            href="solarAndStorage"
+            href="solarandstorage"
           >
             Know more
           </Link>
@@ -105,7 +110,7 @@ const Residential = () => {
           </p>
           <Link
             className="px-8 py-2 secondary-bg-color text-white rounded-md"
-            href="contact"
+            href="shinglesandtiles"
           >
             Know more
           </Link>
@@ -136,7 +141,7 @@ const Residential = () => {
           </p>
           <Link
             className="px-8 py-2 secondary-bg-color text-white rounded-md"
-            href="contact"
+            href="solarsystems"
           >
             Know more
           </Link>

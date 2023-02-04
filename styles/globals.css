@@ -109,3 +109,23 @@ html {
       [center-end] minmax(6rem, 1fr) [full-end];
   }
 }
+
+.call-to-action-wave {
+  background-image: url(../public/waves/call-action-wave.svg);
+}
+
+.feedback-wave {
+  background-image: url(../public/waves/feedback-wave.svg);
+}
+
+.what-you-get-wave {
+  background-image: url(../public/waves/what-you-get.svg);
+}
+
+.whats-included-wave {
+  background-image: url(../public/waves/whats-included-wave.svg);
+}
+
+.contact-wave {
+  background-image: url(../public/waves/contact-wave.svg);
+}

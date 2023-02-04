@@ -107,7 +107,7 @@ const Home: NextPage = () => {
         />
       </div>
 
-      <section className="col-[full-start/full-end] pt-[15rem] pb-[5rem] container gray-bg-color text-center">
+      <section className="col-[full-start/full-end] pt-[15rem] pb-[5rem] container gray-bg-color text-center feedback-wave bg-no-repeat">
         <div className="grid col-[full-start/full-end] md:col-[center-start/center-end] px-8 md:px-0 gap-8">
           <h2 className="text-3xl primary-font-color font-bold">
             Our Clients Speak
