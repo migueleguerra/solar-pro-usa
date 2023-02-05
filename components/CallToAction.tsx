@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface CallToActionParams {
   header: string;
   headerColor?: string;
@@ -21,9 +23,14 @@ export const CallToAction = ({
         </div>
         <p>{message}</p>
         {button ? (
-          <button className="p-4 bg-white primary-font-color text-xs font-bold rounded-md">
-            Finance Available
-          </button>
+          <div className="transform transition duration-200 hover:scale-110">
+            <Link
+              href="#"
+              className="px-8 py-3 bg-white primary-font-color font-bold rounded-md"
+            >
+              Finance Available
+            </Link>
+          </div>
         ) : (
           <></>
         )}

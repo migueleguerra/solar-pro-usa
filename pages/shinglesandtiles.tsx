@@ -41,12 +41,14 @@ const ShinglesAndTiles = () => {
               your roofline and provide a clean aesthetic, will also withstand
               all type of heavy weather with a 100% leakproof warranty.
             </p>
-            <Link
-              className="px-8 py-2 secondary-bg-color text-white rounded-md"
-              href=""
-            >
-              View Brochure
-            </Link>
+            <div className="transform transition duration-200 hover:scale-110">
+              <Link
+                className="px-8 py-2 secondary-bg-color text-white rounded-md"
+                href=""
+              >
+                View Brochure
+              </Link>
+            </div>
           </div>
           <div className="flex flex-col space-y-4">
             <div>
@@ -151,12 +153,14 @@ const ShinglesAndTiles = () => {
               <p>Master Solar Installer</p>
               <p className="md:mr-[3rem]">25 Years</p>
             </div>
-            <Link
-              className="px-8 py-3 secondary-bg-color text-white rounded-md font-semibold text-center"
-              href="contact"
-            >
-              View Warranty
-            </Link>
+            <div className="flex justify-center transform transition duration-200 hover:scale-110">
+              <Link
+                className="py-3 w-[95%] secondary-bg-color text-white rounded-md font-semibold text-center"
+                href="contact"
+              >
+                View Warranty
+              </Link>
+            </div>
           </div>
         </div>
       </section>

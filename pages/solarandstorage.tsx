@@ -42,12 +42,14 @@ const SolarAndStorage = () => {
               <span className="secondary-font-color">Sonnen</span> (Up to 15
               year or 15,000 cycles warranty)
             </p>
-            <Link
-              className="px-8 py-2 secondary-bg-color text-white rounded-md"
-              href=""
-            >
-              View Brochure
-            </Link>
+            <div className="transform transition duration-200 hover:scale-110">
+              <Link
+                className="px-8 py-2 secondary-bg-color text-white rounded-md"
+                href=""
+              >
+                View Brochure
+              </Link>
+            </div>
           </div>
           <div className="flex flex-col space-y-4">
             <div>

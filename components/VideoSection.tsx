@@ -18,9 +18,11 @@ export const VideoSection = () => {
             className="border p-2 rounded-md col-start-1 col-span-2"
             placeholder="Enter your email"
           ></input>
-          <button className="px-6 py-2 md:w-full w-[50%] primary-bg-color text-white rounded-md">
-            Contact Us
-          </button>
+          <div className="transform transition duration-200 hover:scale-110 hover:translate-x-5 hover:md:translate-x-0">
+            <button className="px-6 py-2 md:w-full w-[50%] primary-bg-color text-white rounded-md">
+              Contact Us
+            </button>
+          </div>
         </div>
       </div>
       <div className="w-full h-[25rem] lg:h-full flex flex-col justify-center">

@@ -21,15 +21,17 @@ export const ServiceCard = ({
         alt={imageUrl}
       />
       <h3 className="primary-font-color uppercase font-bold">{header}</h3>
-      <p className="h-full lg:h-[max(8rem,10vh)] flex items-center px-4 primary-font-color my-2 xl:my-0">
+      <p className="h-full lg:h-[max(8rem,10vh)] flex items-center px-4 primary-font-color">
         {message}
       </p>
-      <Link
-        href={linkHref}
-        className="py-2 m-4 justify-end primary-bg-color text-white rounded-md"
-      >
-        Learn More
-      </Link>
+      <div className="flex justify-center m-4 transform transition duration-200 hover:scale-110">
+        <Link
+          href={linkHref}
+          className="w-[90%] py-2 primary-bg-color text-white rounded-md"
+        >
+          Learn More
+        </Link>
+      </div>
     </div>
   );
 };

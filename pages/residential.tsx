@@ -75,9 +75,9 @@ const Residential = () => {
             <span className="secondary-font-color">Best Warranty</span>
           </h2>
         </div>
-        <div className="px-8 flex justify-center">
+        <div className="px-8">
           <img
-            className="rounded-md shadow-xl"
+            className="rounded-md shadow-xl w-full h-full object-cover"
             src="https://images.unsplash.com/photo-1630608354129-6a7704150401?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
             alt="solar panels"
           />
@@ -91,12 +91,14 @@ const Residential = () => {
             going solar plus storage you can always use CLEAN energy to power
             your essentials using your own energy.
           </p>
-          <Link
-            className="px-8 py-2 secondary-bg-color text-white rounded-md"
-            href="solarandstorage"
-          >
-            Know more
-          </Link>
+          <div className="transform transition duration-200 hover:scale-110">
+            <Link
+              className="px-8 py-2 secondary-bg-color text-white rounded-md"
+              href="solarandstorage"
+            >
+              Know more
+            </Link>
+          </div>
         </div>
         <div className="p-8 flex flex-col space-y-4 justify-center items-start lg:row-start-3">
           <h3 className="text-2xl font-bold">
@@ -108,23 +110,25 @@ const Residential = () => {
             roofing materials such as ceramic, metal or asphalt that our experts
             install.
           </p>
-          <Link
-            className="px-8 py-2 secondary-bg-color text-white rounded-md"
-            href="shinglesandtiles"
-          >
-            Know more
-          </Link>
+          <div className="transform transition duration-200 hover:scale-110">
+            <Link
+              className="px-8 py-2 secondary-bg-color text-white rounded-md"
+              href="shinglesandtiles"
+            >
+              Know more
+            </Link>
+          </div>
         </div>
-        <div className="px-8 row-start-4 lg:row-start-3 flex justify-center">
+        <div className="px-8 row-start-4 lg:row-start-3">
           <img
-            className="rounded-md shadow-xl"
+            className="rounded-md shadow-xl w-full h-full object-cover"
             src="https://www.cnet.com/a/img/resize/2044f5631e1ddfd77164c6332f0579c55ccf98ef/hub/2011/10/20/6975a085-fdc5-11e2-8c7c-d4ae52e62bcc/Dow_solar_shingles.jpg?auto=webp&fit=crop&height=675&width=1200"
             alt="solar panels"
           />
         </div>
-        <div className="px-8 flex justify-center">
+        <div className="px-8">
           <img
-            className="rounded-md shadow-xl"
+            className="rounded-md shadow-xl w-full h-full object-cover"
             src="https://images.unsplash.com/photo-1660330589827-da8ab7dd3c02?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
             alt="solar panels"
           />
@@ -139,12 +143,14 @@ const Residential = () => {
             technology will give you full monitoring system that will allow you
             to keep track of your savings.
           </p>
-          <Link
-            className="px-8 py-2 secondary-bg-color text-white rounded-md"
-            href="solarsystems"
-          >
-            Know more
-          </Link>
+          <div className="transform transition duration-200 hover:scale-110">
+            <Link
+              className="px-8 py-2 secondary-bg-color text-white rounded-md"
+              href="solarsystems"
+            >
+              Know more
+            </Link>
+          </div>
         </div>
       </section>
 

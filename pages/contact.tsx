@@ -141,9 +141,11 @@ function Contact() {
           <input className="border py-1 px-2 rounded-md w-full" />
         </div>
 
-        <button className="secondary-bg-color text-white p-2 rounded-md shadow-md mx-8 sm:mx-0">
-          Submit
-        </button>
+        <div className="flex justify-center transform transition duration-200 hover:scale-110 pt-4">
+          <button className="secondary-bg-color text-white py-2 w-full rounded-md shadow-md mx-8 sm:mx-0">
+            Submit
+          </button>
+        </div>
       </form>
     </section>
   );

@@ -15,12 +15,14 @@ export const Hero = ({ heading, headingColor, message }: HeroParams) => {
           {heading} <span className="secondary-font-color">{headingColor}</span>
         </h1>
         <p className="py-5 text-xl font-normal primary-font-color">{message}</p>
-        <Link
-          href="/contact"
-          className="px-8 py-2 secondary-bg-color text-white rounded-md"
-        >
-          Get a Quote
-        </Link>
+        <div className="transform transition duration-200 hover:scale-110 hover:translate-x-5">
+          <Link
+            href="contact"
+            className="px-8 py-2 secondary-bg-color text-white rounded-md"
+          >
+            Get a Quote
+          </Link>
+        </div>
       </div>
     </header>
   );

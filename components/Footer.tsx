@@ -13,15 +13,30 @@ export const Footer = () => {
         </Link>
       </div>
       <div className="col-[center-start/center-end] sm:row-start-2 flex sm:flex-row flex-col sm:space-x-4 sm:justify-end sm:pt-0 pt-[2rem] text-center sm:space-y-0 space-y-4">
-        <Link href="/">
-          <p className="text-sm secondary-font-color">Privacy Policy</p>
-        </Link>
-        <Link href="/">
-          <p className="text-sm secondary-font-color">About Us</p>
-        </Link>
-        <Link href="/">
-          <p className="text-sm secondary-font-color">Contact Us</p>
-        </Link>
+        <div className="transform transition duration-200 hover:scale-110">
+          <Link
+            className="text-sm secondary-font-color hover:text-white"
+            href="#"
+          >
+            Privacy Policy
+          </Link>
+        </div>
+        <div className="transform transition duration-200 hover:scale-110">
+          <Link
+            className="text-sm secondary-font-color hover:text-white"
+            href="#"
+          >
+            About Us
+          </Link>
+        </div>
+        <div className="transform transition duration-200 hover:scale-110">
+          <Link
+            className="text-sm secondary-font-color hover:text-white"
+            href="contact"
+          >
+            Contact Us
+          </Link>
+        </div>
       </div>
       <hr className="col-[center-start/center-end] row-start-3 gray-bg-color my-[2rem]" />
       <div className="col-[center-start/center-end] sm:row-start-4 flex items-center sm:justify-start justify-center sm:pt-0 pt-[2rem]">
@@ -29,19 +44,29 @@ export const Footer = () => {
       </div>
       <div className="col-[center-start/center-end] row-start-4 flex items-center sm:justify-end justify-center">
         <p className="text-sm text-white">Follow us:</p>
-        <Link href="/">
-          <img className="w-6 mx-2" src="footer/facebook.svg" alt="facebook" />
-        </Link>
-        <Link href="/">
-          <img className="w-6 mx-2" src="footer/twitter.svg" alt="twitter" />
-        </Link>
-        <Link href="/">
-          <img
-            className="w-6 mx-2"
-            src="footer/instagram.svg"
-            alt="instagram"
-          />
-        </Link>
+        <div className="transform transition duration-200 hover:scale-110">
+          <Link href="#">
+            <img
+              className="w-6 mx-2"
+              src="footer/facebook.svg"
+              alt="facebook"
+            />
+          </Link>
+        </div>
+        <div className="transform transition duration-200 hover:scale-110">
+          <Link href="#">
+            <img className="w-6 mx-2" src="footer/twitter.svg" alt="twitter" />
+          </Link>
+        </div>
+        <div className="transform transition duration-200 hover:scale-110">
+          <Link href="#">
+            <img
+              className="w-6 mx-2"
+              src="footer/instagram.svg"
+              alt="instagram"
+            />
+          </Link>
+        </div>
       </div>
     </footer>
   );
