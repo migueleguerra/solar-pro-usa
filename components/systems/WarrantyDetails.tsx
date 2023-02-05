@@ -10,7 +10,7 @@ export const WarrantyDetails = ({
   return (
     <div className="flex flex-col space-y-[4rem] primary-font-color lg:px-0 px-[2rem]">
       <h3 className="text-center text-3xl font-bold">{heading}</h3>
-      <p className="text-center text-lg">{message}</p>
+      <p className="lg:text-center text-lg">{message}</p>
       <div className="grid lg:grid-cols-3 lg:gap-4 lg:px-[4rem] gap-[4rem]">
         <div className="flex flex-col space-y-[1rem]">
           <div className="flex items-center space-x-[1rem] font-bold">

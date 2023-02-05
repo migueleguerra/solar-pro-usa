@@ -36,12 +36,12 @@ export const HeroServices = ({
         <>
           <div className="col-start-1 col-end-9 lg:col-start-1 lg:col-span-1 lg:h-screen h-[30rem] overflow-hidden">
             <img
-              className="w-screen md:w-full object-cover md:h-screen lg:translate-y-0 translate-y-[-10rem]"
+              className="w-screen md:w-full object-cover md:h-screen h-[max(30rem,30vh)]"
               src={imageUrl}
               alt="residential"
             />
           </div>
-          <div className="col-start-1 col-end-9 lg:mr-[20%] lg:col-start-2 lg:col-span-1 flex flex-col justify-center lg:pl-10 p-8 space-y-6 text-center lg:text-left primary-font-color">
+          <div className="col-start-1 col-end-9 lg:mr-[20%] lg:col-start-2 lg:col-span-1 flex flex-col justify-center lg:pl-10 p-8 space-y-6 primary-font-color">
             <h1 className="text-4xl font-bold">
               {heading}{" "}
               <span className="secondary-font-color">{headingColor}</span>

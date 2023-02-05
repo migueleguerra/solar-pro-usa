@@ -15,7 +15,7 @@ const Residential = () => {
 
       <section className="col-[full-start/full-end]">
         <HeroServices
-          imageUrl="https://images.unsplash.com/photo-1605980413988-9ff24c537935?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+          imageUrl="https://images.unsplash.com/photo-1655300283246-1ef0317a565d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80"
           heading="Residential"
           headingColor="Solar"
           message="Solar Pro offers best in-class solutions to homeowners throughout the greater metro Atlanta area. Offering the leading equipment in the industry that fits all budgets. Solar pro offers to not only maximize your savings but also manage them from the commodity of your home. The days of the big chunky piece of metal is over, Solar Pro have a wide selection of products such as solar shingles, solar tiles and conventional solar panels with and without storage that will take your energy savings an independence to the next level. With the new federal increase in the solar plus storage incentive to up to a 30%* and the increases in energy from your electric companies your ROI will be as short as it has ever been."
@@ -26,7 +26,7 @@ const Residential = () => {
 
       <section className="py-[5rem] grid col-[full-start/full-end] lg:px-[12rem] gap-4 text-center primary-font-color gray-bg-color">
         <h2 className="text-3xl font-bold">What is the process?</h2>
-        <p className="text-xl mb-10 p-8 lg:p-0">
+        <p className="text-xl mb-10 p-8 lg:p-0 lg:text-center text-left">
           Solar Pro makes it simple for you, one of our experts collects your
           utility bill and has an initial conversation on your needs and goals.
           Then, our team of techs will design a custom proposal for your home.
@@ -75,10 +75,10 @@ const Residential = () => {
             <span className="secondary-font-color">Best Warranty</span>
           </h2>
         </div>
-        <div className="px-8">
+        <div className="px-8 flex justify-center">
           <img
             className="rounded-md shadow-xl"
-            src="https://images.unsplash.com/flagged/photo-1566838634698-48b165cb0a9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            src="https://images.unsplash.com/photo-1630608354129-6a7704150401?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
             alt="solar panels"
           />
         </div>
@@ -115,17 +115,17 @@ const Residential = () => {
             Know more
           </Link>
         </div>
-        <div className="px-8 row-start-4 lg:row-start-3">
+        <div className="px-8 row-start-4 lg:row-start-3 flex justify-center">
           <img
             className="rounded-md shadow-xl"
-            src="https://images.unsplash.com/photo-1630608354129-6a7704150401?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
+            src="https://www.cnet.com/a/img/resize/2044f5631e1ddfd77164c6332f0579c55ccf98ef/hub/2011/10/20/6975a085-fdc5-11e2-8c7c-d4ae52e62bcc/Dow_solar_shingles.jpg?auto=webp&fit=crop&height=675&width=1200"
             alt="solar panels"
           />
         </div>
-        <div className="px-8">
+        <div className="px-8 flex justify-center">
           <img
             className="rounded-md shadow-xl"
-            src="https://images.unsplash.com/photo-1624397640148-949b1732bb0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+            src="https://images.unsplash.com/photo-1660330589827-da8ab7dd3c02?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
             alt="solar panels"
           />
         </div>

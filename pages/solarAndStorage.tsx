@@ -17,7 +17,7 @@ const SolarAndStorage = () => {
 
       <section className="col-[full-start/full-end]">
         <HeroServices
-          imageUrl="https://images.unsplash.com/photo-1605980413988-9ff24c537935?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+          imageUrl="https://images.unsplash.com/photo-1630608354129-6a7704150401?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
           heading="Backup"
           headingColor="Protection"
           message="Say goodbye to the power outages, our integrated solutions will supply your CLEAN energy when the grid goes down.
@@ -88,8 +88,10 @@ const SolarAndStorage = () => {
 
       {/* Video Section */}
 
-      <section className="col-[full-start/full-end] md:col-[center-start/center-end]">
-        <div className="lg:my-[8rem] my-[4rem]">
+      <section className="col-[full-start/full-end] container relative">
+        <div className="absolute gray-bg-color px-[15rem] lg:py-[18rem] rounded-l-lg right-0 top-[10%]" />
+        <div className="absolute dots px-[10rem] lg:py-[18rem] right-0 top-[9.5%] bg-no-repeat bg-center" />
+        <div className="col-[full-start/full-end] md:col-[center-start/center-end] py-[5rem] lg:py-[10rem] z-10">
           <VideoSection />
         </div>
       </section>

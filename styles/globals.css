@@ -51,6 +51,10 @@ html {
   background-color: #5e6282;
 }
 
+.gray-blue-bg-color {
+  background-color: #41526f;
+}
+
 .gray-bg-color {
   background-color: #f9fafb;
 }
@@ -128,4 +132,8 @@ html {
 
 .contact-wave {
   background-image: url(../public/waves/contact-wave.svg);
+}
+
+.dots {
+  background-image: url(../public/dots.svg);
 }

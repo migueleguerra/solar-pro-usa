@@ -3,23 +3,22 @@ import Link from "next/link";
 export const VideoSection = () => {
   return (
     <div className="grid lg:grid-cols-2 lg:gap-4 md:px-0 px-8">
-      <div className="flex flex-col justify-center primary-font-color h-[25rem]">
+      <div className="flex flex-col justify-center primary-font-color h-[25rem] space-y-[1rem]">
         <p className="text-xl">Hey you!</p>
-        <h3 className="text-3xl font-bold">Contact Us for more</h3>
-        <h3 className="text-3xl secondary-font-color font-bold">
-          Information!
+        <h3 className="text-3xl font-bold">
+          Contact Us for more{" "}
+          <span className="secondary-font-color">Information!</span>
         </h3>
-        <p className="py-4">
-          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
-          cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua
-          ad ad non deserunt sunt.{" "}
+        <p>
+          If you have any questions and want to talk to one of our experts feel
+          free to reach out to us.
         </p>
-        <div className="py-4">
+        <div className="grid md:grid-cols-3 gap-[1rem] grid-cols-1">
           <input
-            className="border pl-2 md:w-2/3 lg:w-1/2 2xl:w-2/3 py-2 mr-4 rounded-md"
+            className="border p-2 rounded-md col-start-1 col-span-2"
             placeholder="Enter your email"
           ></input>
-          <button className="px-6 py-2 primary-bg-color text-white rounded-md">
+          <button className="px-6 py-2 md:w-full w-[50%] primary-bg-color text-white rounded-md">
             Contact Us
           </button>
         </div>

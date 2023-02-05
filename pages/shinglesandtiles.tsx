@@ -17,7 +17,7 @@ const ShinglesAndTiles = () => {
 
       <section className="col-[full-start/full-end]">
         <HeroServices
-          imageUrl="https://images.unsplash.com/photo-1605980413988-9ff24c537935?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+          imageUrl="https://images.unsplash.com/flagged/photo-1566838616631-f2618f74a6a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80"
           heading="Apollo III"
           headingColor="Solar System"
           message="The Apollo II solar roofing system packs sleek yet powerful solar energy production into a low-profile roofing system. Featuring solar shingles that are capable of being installed with either a new or existing asphalt shingle roof, an Apollo II system offers clean energy without the bulky look of racks and panels"
@@ -163,8 +163,10 @@ const ShinglesAndTiles = () => {
 
       {/* Video Section */}
 
-      <section className="col-[full-start/full-end] md:col-[center-start/center-end]">
-        <div className="lg:my-[8rem] my-[4rem]">
+      <section className="col-[full-start/full-end] container relative">
+        <div className="absolute gray-bg-color px-[15rem] lg:py-[18rem] rounded-l-lg right-0 top-[10%]" />
+        <div className="absolute dots px-[10rem] lg:py-[18rem] right-0 top-[9.5%] bg-no-repeat bg-center" />
+        <div className="col-[full-start/full-end] md:col-[center-start/center-end] py-[5rem] lg:py-[10rem] z-10">
           <VideoSection />
         </div>
       </section>

@@ -88,7 +88,7 @@ const Home: NextPage = () => {
               linkHref="comercial"
             />
             <ServiceCard
-              imageUrl="https://images.unsplash.com/photo-1624397640148-949b1732bb0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+              imageUrl="https://images.unsplash.com/photo-1660330589257-813305a4a383?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80"
               header="Maintenance"
               message="These systems can last for decades and provide your home with an abundant source of energy, but panels can lose efficiency..."
               linkHref="maintenance"
@@ -107,7 +107,7 @@ const Home: NextPage = () => {
         />
       </div>
 
-      <section className="col-[full-start/full-end] pt-[15rem] pb-[5rem] container gray-bg-color text-center feedback-wave bg-no-repeat">
+      <section className="col-[full-start/full-end] pt-[15rem] pb-[5rem] container text-center feedback-wave bg-no-repeat bg-center bg-cover">
         <div className="grid col-[full-start/full-end] md:col-[center-start/center-end] px-8 md:px-0 gap-8">
           <h2 className="text-3xl primary-font-color font-bold">
             Our Clients Speak
@@ -147,8 +147,12 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      <section className="col-[full-start/full-end] md:col-[center-start/center-end] py-[5rem] lg:py-[10rem]">
-        <VideoSection />
+      <section className="col-[full-start/full-end] container relative">
+        <div className="absolute gray-bg-color px-[15rem] lg:py-[18rem] rounded-l-lg right-0 top-[10%]" />
+        <div className="absolute dots px-[10rem] lg:py-[18rem] right-0 top-[9.5%] bg-no-repeat bg-center" />
+        <div className="col-[full-start/full-end] md:col-[center-start/center-end] py-[5rem] lg:py-[10rem] z-10">
+          <VideoSection />
+        </div>
       </section>
     </div>
   );

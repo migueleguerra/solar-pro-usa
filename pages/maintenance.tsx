@@ -13,7 +13,7 @@ const Maintenance = () => {
 
       <section className="col-[full-start/full-end]">
         <HeroServices
-          imageUrl="https://images.unsplash.com/photo-1615630859219-0459703c34e6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+          imageUrl="https://images.unsplash.com/photo-1660330590022-9f4ff56b63f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80"
           heading="Solar Maintenance"
           headingColor="Services"
           message="These systems can last for decades and provide your home with an abundant source of energy, but panels can lose efficiency due to a vast array of causes: dust accumulation, bird droppings, squirrels chewing through cables, and more. 
@@ -33,7 +33,7 @@ const Maintenance = () => {
       {/* Maintenance Services */}
 
       <section className="lg:translate-y-[-30%] grid col-[full-start/full-end] grid-cols-2 primary-font-color lg:py-0">
-        <div className="xl:ml-[30%] lg:ml-[20%] ml-0 xl:translate-y-[2rem] lg:translate-y-[4rem] flex flex-col lg:items-start items-center col-start-1 col-span-2 lg:col-span-1 justify-center space-y-6 lg:pr-[4rem] px-[2rem] lg:px-0 lg:pt-0 pt-[2rem]">
+        <div className="xl:ml-[30%] lg:ml-[20%] ml-0 xl:translate-y-[2rem] lg:translate-y-[4rem] flex flex-col lg:items-start items-center col-start-1 col-span-2 lg:col-span-1 justify-center space-y-6 lg:pr-[4rem] px-[2rem] lg:px-0 lg:pt-0 pt-[4rem]">
           <div className="text-3xl font-bold flex">
             <h2>
               Maintenance <span className="secondary-font-color">Service</span>
@@ -91,8 +91,10 @@ const Maintenance = () => {
         </div>
       </section>
 
-      <section className="lg:translate-y-[-30%] col-[full-start/full-end] md:col-[center-start/center-end]">
-        <div className="col-start-2 col-end-8">
+      <section className="col-[full-start/full-end] container relative lg:translate-y-[-30%]">
+        <div className="absolute gray-bg-color px-[15rem] lg:py-[18rem] rounded-l-lg right-0" />
+        <div className="absolute dots px-[10rem] lg:py-[18rem] right-0 top-[2%] bg-no-repeat bg-center" />
+        <div className="col-[full-start/full-end] md:col-[center-start/center-end] py-[4rem] z-10">
           <VideoSection />
         </div>
       </section>
