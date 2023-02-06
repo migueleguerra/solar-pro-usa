@@ -13,9 +13,7 @@ export const FeedbackCard = ({ heading, message, name }: FeedbackCardProms) => {
           {message}
         </p>
       </div>
-      <div className="primary-font-color">
-        <p className="font-bold">{name}</p>
-      </div>
+      <p className="font-bold secondary-font-color">{name}</p>
     </div>
   );
 };

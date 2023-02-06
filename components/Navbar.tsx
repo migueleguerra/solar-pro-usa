@@ -171,23 +171,77 @@ export const Navbar = () => {
         <div
           className={
             nav
-              ? "md:hidden absolute inset-0 flex justify-center items-center w-full h-screen bg-white text-center"
+              ? "md:hidden absolute inset-0 flex justify-center items-center w-full h-screen bg-white"
               : "md:hidden absolute left-[-100%] flex justify-center items-center w-full h-screen bg-white text-center"
           }
         >
           <ul>
             <li className="p-4 text-4xl hover:text-orange-600">
-              <Link href="/aboutus">About Us</Link>
+              <Link onClick={handleNav} href="/">
+                Home
+              </Link>
             </li>
             <li className="p-4 text-4xl hover:text-orange-600">
-              <Link href="/services">Services</Link>
+              <Link onClick={handleNav} href="#">
+                About Us
+              </Link>
             </li>
-            <li className="p-4 text-4xl hover:text-orange-600">
-              <Link href="/benefits">Systems</Link>
+            <li className="p-4 border-1 border-blue-900 rounded-lg">
+              <p className="text-4xl">Services</p>
+              <div className="flex flex-col space-y-[.5rem] text-2xl pl-[2rem] pt-[1rem]">
+                <Link
+                  onClick={handleNav}
+                  className="hover:text-orange-600"
+                  href="residential"
+                >
+                  Residential
+                </Link>
+                <Link
+                  onClick={handleNav}
+                  className="hover:text-orange-600"
+                  href="comercial"
+                >
+                  Comercial
+                </Link>
+                <Link
+                  onClick={handleNav}
+                  className="hover:text-orange-600"
+                  href="maintenance"
+                >
+                  Maintenance
+                </Link>
+              </div>
+            </li>
+            <li className="p-4 border-1 border-blue-900 rounded-lg mb-[1rem]">
+              <p className="text-4xl">Systems</p>
+              <div className="flex flex-col space-y-[.5rem] text-2xl pl-[2rem] pt-[1rem]">
+                <Link
+                  onClick={handleNav}
+                  className="hover:text-orange-600"
+                  href="solarandstorage"
+                >
+                  Solar & Storage
+                </Link>
+                <Link
+                  onClick={handleNav}
+                  className="hover:text-orange-600"
+                  href="shinglesandtiles"
+                >
+                  Solar Shingles & Tiles
+                </Link>
+                <Link
+                  onClick={handleNav}
+                  className="hover:text-orange-600"
+                  href="solarsystems"
+                >
+                  Premium Solar Systems
+                </Link>
+              </div>
             </li>
             <li className="p-4 text-3xl">
               <Link
-                href="/contact"
+                onClick={handleNav}
+                href="contact"
                 className="px-8 py-2 primary-bg-color text-white rounded-md"
               >
                 Contact Us
@@ -195,7 +249,7 @@ export const Navbar = () => {
             </li>
             <li className="p-4 text-3xl">
               <Link
-                href="/contact"
+                href="#"
                 className="px-8 py-2 secondary-bg-color text-white rounded-md"
               >
                 Pay Service
