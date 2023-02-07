@@ -50,10 +50,6 @@ const Maintenance = () => {
                 <h3 className="font-bold dark-gray-font-color">
                   AC system maintenance
                 </h3>
-                <p className="text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna,
-                  tortor tempus.
-                </p>
               </div>
             </div>
             <div className="flex items-center space-x-4">
@@ -62,10 +58,6 @@ const Maintenance = () => {
                 <h3 className="font-bold dark-gray-font-color">
                   DC system maintenance
                 </h3>
-                <p className="text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna,
-                  tortor tempus.
-                </p>
               </div>
             </div>
             <div className="flex items-center space-x-4">
@@ -74,10 +66,6 @@ const Maintenance = () => {
                 <h3 className="font-bold dark-gray-font-color">
                   Data system maintenance
                 </h3>
-                <p className="text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna,
-                  tortor tempus.
-                </p>
               </div>
             </div>
           </div>

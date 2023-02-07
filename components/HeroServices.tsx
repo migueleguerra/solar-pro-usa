@@ -17,10 +17,10 @@ export const HeroServices = ({
     <div className="grid grid-cols-2">
       {reverse ? (
         <>
-          <div className="col-start-1 col-end-9 xl:ml-[23%] lg:ml-[10%] lg:col-start-1 lg:col-span-1 flex flex-col justify-center lg:pl-10 p-8 space-y-6 text-center xl:pt-8 lg:pt-[10rem] lg:text-left primary-font-color">
-            <h1 className="text-4xl font-bold">
-              {heading}{" "}
-              <span className="secondary-font-color">{headingColor}</span>
+          <div className="col-start-1 col-end-9 xl:ml-[23%] lg:ml-[10%] lg:col-start-1 lg:col-span-1 flex flex-col justify-center lg:pl-10 p-8 space-y-6 xl:pt-8 lg:pt-[10rem] lg:text-left primary-font-color">
+            <h1 className="text-4xl font-bold lg:text-left text-center">
+              {heading}
+              <span className="secondary-font-color"> {headingColor}</span>
             </h1>
             <p className="py-5 text-lg font-normal">{message}</p>
           </div>
@@ -42,9 +42,9 @@ export const HeroServices = ({
             />
           </div>
           <div className="col-start-1 col-end-9 lg:mr-[20%] lg:col-start-2 lg:col-span-1 flex flex-col justify-center lg:pl-10 p-8 space-y-6 primary-font-color">
-            <h1 className="text-4xl font-bold">
-              {heading}{" "}
-              <span className="secondary-font-color">{headingColor}</span>
+            <h1 className="text-4xl font-bold lg:text-left text-center">
+              {heading}
+              <span className="secondary-font-color"> {headingColor}</span>
             </h1>
             <p className="py-5 text-lg font-normal">{message}</p>
           </div>

@@ -171,7 +171,7 @@ export const Navbar = () => {
         <div
           className={
             nav
-              ? "md:hidden absolute inset-0 flex justify-center items-center w-full h-screen bg-white"
+              ? "md:hidden absolute inset-0 flex justify-center pt-4 w-full h-screen bg-white"
               : "md:hidden absolute left-[-100%] flex justify-center items-center w-full h-screen bg-white text-center"
           }
         >

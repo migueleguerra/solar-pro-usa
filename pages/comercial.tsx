@@ -41,8 +41,10 @@ const Comercial = () => {
         />
       </section>
 
-      <section className="col-[full-start/full-end] md:col-[center-start/center-end] lg:translate-y-[-30%]">
-        <div className="col-start-2 col-end-8">
+      <section className="col-[full-start/full-end] container relative lg:translate-y-[-30%]">
+        <div className="absolute gray-bg-color px-[15rem] lg:py-[18rem] rounded-l-lg right-0" />
+        <div className="absolute dots px-[10rem] lg:py-[18rem] right-0 top-[2%] bg-no-repeat bg-center" />
+        <div className="col-[full-start/full-end] md:col-[center-start/center-end] py-[4rem] z-10">
           <VideoSection />
         </div>
       </section>
