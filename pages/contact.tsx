@@ -1,5 +1,7 @@
+// @ts-ignore
+
 import React from "react";
-import { SubmitHandler, useForm, Resolver } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 
 type FormValues = {
   firstName: string;
