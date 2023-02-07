@@ -45,32 +45,84 @@ function Contact() {
           {/* First Name */}
 
           <div className="flex flex-col">
-            <label className={`text-sm font-bold`}>First Name*</label>
+            <label
+              className={`text-sm font-bold ${
+                errors.firstName && "text-red-600"
+              }`}
+            >
+              First Name*
+            </label>
             <input
-              {...register("firstName")}
-              className={`border py-1 px-2 rounded-md`}
+              {...register("firstName", {
+                required: true,
+              })}
+              className={`border py-1 px-2 rounded-md ${
+                errors.firstName && "border-red-600 focus:outline-none"
+              }`}
             />
+            {errors.firstName?.type === "required" && (
+              <span className="text-xs text-red-600 pt-1">
+                This field is required
+              </span>
+            )}
           </div>
 
           {/* Last Name */}
 
           <div className="flex flex-col">
-            <label className={`text-sm font-bold`}>Last Name*</label>
+            <label
+              className={`text-sm font-bold ${
+                errors.lastName && "text-red-600"
+              }`}
+            >
+              Last Name*
+            </label>
             <input
-              {...register("lastName")}
-              className={`border py-1 px-2 rounded-md`}
+              {...register("lastName", { required: true })}
+              className={`border py-1 px-2 rounded-md ${
+                errors.lastName && "border-red-600 focus:outline-none"
+              }`}
             />
+            {errors.lastName?.type === "required" && (
+              <span className="text-xs text-red-600 pt-1">
+                This field is required
+              </span>
+            )}
           </div>
         </div>
 
         <div className="flex flex-col sm:flex-row px-8 sm:px-0 gap-4 sm:justify-between">
+          {/* Email */}
+
           <div className="flex flex-col">
-            <label className="text-sm font-bold">Email*</label>
+            <label
+              className={`text-sm font-bold ${errors.email && "text-red-600"}`}
+            >
+              Email*
+            </label>
             <input
-              {...register("email")}
-              className="border py-1 px-2 rounded-md"
+              {...register("email", {
+                required: true,
+                pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+              })}
+              className={`border py-1 px-2 rounded-md ${
+                errors.email && "border-red-600 focus:outline-none"
+              }`}
             />
+            {errors.email?.type === "required" && (
+              <span className="text-xs text-red-600 pt-1">
+                This field is required
+              </span>
+            )}
+            {errors.email?.type === "pattern" && (
+              <span className="text-xs text-red-600 pt-1">
+                enter a valid email
+              </span>
+            )}
           </div>
+
+          {/* Company Name */}
+
           <div className="flex flex-col">
             <label className="text-sm font-bold">Company Name</label>
             <input
@@ -80,31 +132,65 @@ function Contact() {
           </div>
         </div>
 
+        {/* Address */}
+
         <div className="px-8 sm:px-0">
-          <label className="text-sm font-bold">Address*</label>
+          <label
+            className={`text-sm font-bold ${errors.address && "text-red-600"}`}
+          >
+            Address*
+          </label>
           <input
-            {...register("address")}
-            className="border py-1 px-2 rounded-md w-full"
+            {...register("address", { required: true })}
+            className={`border py-1 px-2 rounded-md w-full ${
+              errors.address && "border-red-600 focus:outline-none"
+            }`}
           />
+          {errors.address?.type === "required" && (
+            <span className="text-xs text-red-600 pt-1">
+              This field is required
+            </span>
+          )}
         </div>
 
         <div className="flex flex-col sm:flex-row px-8 sm:px-0 gap-4 sm:justify-between">
+          {/* City */}
+
           <div className="flex flex-col">
-            <label className="text-sm font-bold">City*</label>
-            <input
-              {...register("city")}
-              className="border py-1 px-2 rounded-md"
-            />
-          </div>
-          <div className="flex flex-col">
-            <label className="text-sm font-bold">State*</label>
-            <select
-              {...register("state")}
-              id="state"
-              className="py-1 px-2 border rounded-md sm:w-[13.5rem]"
-              defaultValue="default"
+            <label
+              className={`text-sm font-bold ${errors.city && "text-red-600"}`}
             >
-              <option disabled value="default">
+              City*
+            </label>
+            <input
+              {...register("city", { required: true })}
+              className={`border py-1 px-2 rounded-md ${
+                errors.city && "border-red-600 focus:outline-none"
+              }`}
+            />
+            {errors.city?.type === "required" && (
+              <span className="text-xs text-red-600 pt-1">
+                This field is required
+              </span>
+            )}
+          </div>
+
+          {/* State */}
+
+          <div className="flex flex-col">
+            <label
+              className={`text-sm font-bold ${errors.state && "text-red-600"}`}
+            >
+              State*
+            </label>
+            <select
+              {...register("state", { required: true })}
+              className={`py-1 px-2 border rounded-md sm:w-[13.5rem] ${
+                errors.state && "border-red-600 focus:outline-none"
+              }`}
+              defaultValue=""
+            >
+              <option disabled value="">
                 -- select an option --
               </option>
               <option value="AL">AL</option>
@@ -159,17 +245,39 @@ function Contact() {
               <option value="WV">WV</option>
               <option value="WY">WY</option>
             </select>
+            {errors.state?.type === "required" && (
+              <span className="text-xs text-red-600 pt-1">
+                This field is required
+              </span>
+            )}
           </div>
         </div>
 
         <div className="flex flex-col sm:flex-row px-8 sm:px-0 gap-4 sm:justify-between">
+          {/* Zip Code */}
+
           <div className="flex flex-col">
-            <label className="text-sm font-bold">Zip Code*</label>
+            <label
+              className={`text-sm font-bold ${
+                errors.zipCode && "text-red-600"
+              }`}
+            >
+              Zip Code*
+            </label>
             <input
-              {...register("zipCode")}
-              className="border py-1 px-2 rounded-md sm:w-55"
+              {...register("zipCode", { required: true })}
+              className={`border py-1 px-2 rounded-md sm:w-55 ${
+                errors.zipCode && "border-red-600 focus:outline-none"
+              }`}
             />
+            {errors.zipCode?.type === "required" && (
+              <span className="text-xs text-red-600 pt-1">
+                This field is required
+              </span>
+            )}
           </div>
+
+          {/* Country */}
 
           <div className="flex flex-col">
             <label className="text-sm font-bold">Country</label>
@@ -183,6 +291,8 @@ function Contact() {
           </div>
         </div>
 
+        {/* How can we help you? */}
+
         <div className="flex flex-col px-8 sm:px-0">
           <label className="text-sm font-bold">How can we help you?</label>
           <textarea
@@ -192,15 +302,24 @@ function Contact() {
         </div>
 
         <div className="flex flex-col sm:flex-row px-8 sm:px-0 gap-4 sm:justify-between">
+          {/* Type of Roof */}
+
           <div className="flex flex-col">
-            <label className="text-sm font-bold">Type of Roof*</label>
-            <select
-              {...register("typeOfRoof")}
-              id="type-of-roof"
-              className="py-1 px-2 border rounded-md sm:w-[13.5rem]"
-              defaultValue="default"
+            <label
+              className={`text-sm font-bold ${
+                errors.typeOfRoof && "text-red-600"
+              }`}
             >
-              <option disabled value="default">
+              Type of Roof*
+            </label>
+            <select
+              {...register("typeOfRoof", { required: true })}
+              className={`py-1 px-2 border rounded-md sm:w-[13.5rem] ${
+                errors.typeOfRoof && "border-red-600 focus:outline-none"
+              }`}
+              defaultValue=""
+            >
+              <option disabled value="">
                 -- select an option --
               </option>
               <option value="A">Type-A</option>
@@ -208,7 +327,15 @@ function Contact() {
               <option value="C">Type-C</option>
               <option value="other">Other</option>
             </select>
+            {errors.typeOfRoof?.type === "required" && (
+              <span className="text-xs text-red-600 pt-1">
+                This field is required
+              </span>
+            )}
           </div>
+
+          {/* Begin Project */}
+
           <div className="flex flex-col">
             <label className="text-sm font-bold">Begin Project*</label>
             <input name="begin" className="border py-1 px-2 rounded-md" />
@@ -216,6 +343,8 @@ function Contact() {
         </div>
 
         <div className="flex flex-col sm:flex-row px-8 sm:px-0 gap-4 sm:justify-between">
+          {/* Proyect type */}
+
           <div className="space-y-2">
             <label className="text-sm font-bold">Proyect type*</label>
             <div className="flex items-center space-x-2">
@@ -267,15 +396,25 @@ function Contact() {
               <label className="text-sm">Other</label>
             </div>
           </div>
+
+          {/* Type of Service */}
+
           <div className="flex flex-col">
-            <label className="text-sm font-bold">Type of Service*</label>
-            <select
-              {...register("typeOfService")}
-              id="type-of-service"
-              className="py-1 px-2 border rounded-md sm:w-[13.5rem]"
-              defaultValue="default"
+            <label
+              className={`text-sm font-bold ${
+                errors.typeOfService && "text-red-600"
+              }`}
             >
-              <option disabled value="default">
+              Type of Service*
+            </label>
+            <select
+              {...register("typeOfService", { required: true })}
+              className={`py-1 px-2 border rounded-md sm:w-[13.5rem] ${
+                errors.typeOfService && "border-red-600 focus:outline-none"
+              }`}
+              defaultValue=""
+            >
+              <option disabled value="">
                 -- select an option --
               </option>
               <option value="Residential">Residential</option>
@@ -283,6 +422,11 @@ function Contact() {
               <option value="Maintenance">Maintenance</option>
               <option value="other">Other</option>
             </select>
+            {errors.typeOfService?.type === "required" && (
+              <span className="text-xs text-red-600 pt-1">
+                This field is required
+              </span>
+            )}
           </div>
         </div>
 
