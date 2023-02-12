@@ -1,42 +1,7 @@
-// @ts-ignore
-
-import React from "react";
-import { SubmitHandler, useForm } from "react-hook-form";
-
-type FormValues = {
-  firstName: string;
-  lastName: string;
-  email: string;
-  companyName?: string;
-  address: string;
-  city: string;
-  state: string;
-  zipCode: string;
-  country: string;
-  message?: string;
-  typeOfRoof: string;
-  typeOfService: string;
-  file?: HTMLInputElement;
-  hearAboutUs?: string;
-};
-
-function Contact() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<FormValues>();
-
-  const onSubmit: SubmitHandler<FormValues> = (data) => {
-    console.log(data);
-  };
-
+const Contact = () => {
   return (
     <section className="contact-wave bg-no-repeat bg-cover bg-center">
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col primary-font-color mx-auto max-w-2xl space-y-4 bg-white sm:shadow-lg mb-[20rem] translate-y-[10rem] sm:p-[4rem] pt-[2rem] px-2"
-      >
+      <form className="flex flex-col primary-font-color mx-auto max-w-2xl space-y-4 bg-white sm:shadow-lg mb-[20rem] translate-y-[10rem] sm:p-[4rem] pt-[2rem] px-2">
         <h3 className="text-3xl font-bold text-center">Let's work together</h3>
         <p className="text-center px-4 sm:px-0">
           We'd love to hear from you! Send us a message using the form, or email
@@ -47,49 +12,15 @@ function Contact() {
           {/* First Name */}
 
           <div className="flex flex-col">
-            <label
-              className={`text-sm font-bold ${
-                errors.firstName && "text-red-600"
-              }`}
-            >
-              First Name*
-            </label>
-            <input
-              {...register("firstName", {
-                required: true,
-              })}
-              className={`border py-1 px-2 rounded-md ${
-                errors.firstName && "border-red-600 focus:outline-none"
-              }`}
-            />
-            {errors.firstName?.type === "required" && (
-              <span className="text-xs text-red-600 pt-1">
-                This field is required
-              </span>
-            )}
+            <label className={`text-sm font-bold`}>First Name*</label>
+            <input className={`border py-1 px-2 rounded-md`} />
           </div>
 
           {/* Last Name */}
 
           <div className="flex flex-col">
-            <label
-              className={`text-sm font-bold ${
-                errors.lastName && "text-red-600"
-              }`}
-            >
-              Last Name*
-            </label>
-            <input
-              {...register("lastName", { required: true })}
-              className={`border py-1 px-2 rounded-md ${
-                errors.lastName && "border-red-600 focus:outline-none"
-              }`}
-            />
-            {errors.lastName?.type === "required" && (
-              <span className="text-xs text-red-600 pt-1">
-                This field is required
-              </span>
-            )}
+            <label className={`text-sm font-bold`}>Last Name*</label>
+            <input className={`border py-1 px-2 rounded-md`} />
           </div>
         </div>
 
@@ -97,99 +28,46 @@ function Contact() {
           {/* Email */}
 
           <div className="flex flex-col">
-            <label
-              className={`text-sm font-bold ${errors.email && "text-red-600"}`}
-            >
-              Email*
-            </label>
-            <input
-              {...register("email", {
-                required: true,
-                pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-              })}
-              className={`border py-1 px-2 rounded-md ${
-                errors.email && "border-red-600 focus:outline-none"
-              }`}
-            />
-            {errors.email?.type === "required" && (
-              <span className="text-xs text-red-600 pt-1">
-                This field is required
-              </span>
-            )}
-            {errors.email?.type === "pattern" && (
-              <span className="text-xs text-red-600 pt-1">
-                enter a valid email
-              </span>
-            )}
+            <label className={`text-sm font-bold`}>Email*</label>
+            <input className={`border py-1 px-2 rounded-md`} />
           </div>
 
           {/* Company Name */}
 
           <div className="flex flex-col">
             <label className="text-sm font-bold">Company Name</label>
-            <input
-              {...register("companyName")}
-              className="border py-1 px-2 rounded-md"
-            />
+            <input className="border py-1 px-2 rounded-md" />
           </div>
+        </div>
+
+        {/* Phone */}
+
+        <div className="flex flex-col px-8 sm:px-0">
+          <label className={`text-sm font-bold`}>Phone Number</label>
+          <input className={`border py-1 px-2 rounded-md sm:w-[13.5rem]`} />
         </div>
 
         {/* Address */}
 
-        <div className="px-8 sm:px-0">
-          <label
-            className={`text-sm font-bold ${errors.address && "text-red-600"}`}
-          >
-            Address*
-          </label>
-          <input
-            {...register("address", { required: true })}
-            className={`border py-1 px-2 rounded-md w-full ${
-              errors.address && "border-red-600 focus:outline-none"
-            }`}
-          />
-          {errors.address?.type === "required" && (
-            <span className="text-xs text-red-600 pt-1">
-              This field is required
-            </span>
-          )}
+        <div className="flex flex-col px-8 sm:px-0">
+          <label className={`text-sm font-bold`}>Address</label>
+          <input className={`border py-1 px-2 rounded-md`} />
         </div>
 
         <div className="flex flex-col sm:flex-row px-8 sm:px-0 gap-4 sm:justify-between">
           {/* City */}
 
           <div className="flex flex-col">
-            <label
-              className={`text-sm font-bold ${errors.city && "text-red-600"}`}
-            >
-              City*
-            </label>
-            <input
-              {...register("city", { required: true })}
-              className={`border py-1 px-2 rounded-md ${
-                errors.city && "border-red-600 focus:outline-none"
-              }`}
-            />
-            {errors.city?.type === "required" && (
-              <span className="text-xs text-red-600 pt-1">
-                This field is required
-              </span>
-            )}
+            <label className={`text-sm font-bold`}>City</label>
+            <input className={`border py-1 px-2 rounded-md`} />
           </div>
 
           {/* State */}
 
           <div className="flex flex-col">
-            <label
-              className={`text-sm font-bold ${errors.state && "text-red-600"}`}
-            >
-              State*
-            </label>
+            <label className={`text-sm font-bold`}>State</label>
             <select
-              {...register("state", { required: true })}
-              className={`py-1 px-2 border rounded-md sm:w-[13.5rem] ${
-                errors.state && "border-red-600 focus:outline-none"
-              }`}
+              className={`py-1 px-2 border rounded-md sm:w-[13.5rem]`}
               defaultValue=""
             >
               <option disabled value="">
@@ -247,11 +125,6 @@ function Contact() {
               <option value="WV">WV</option>
               <option value="WY">WY</option>
             </select>
-            {errors.state?.type === "required" && (
-              <span className="text-xs text-red-600 pt-1">
-                This field is required
-              </span>
-            )}
           </div>
         </div>
 
@@ -259,24 +132,8 @@ function Contact() {
           {/* Zip Code */}
 
           <div className="flex flex-col">
-            <label
-              className={`text-sm font-bold ${
-                errors.zipCode && "text-red-600"
-              }`}
-            >
-              Zip Code*
-            </label>
-            <input
-              {...register("zipCode", { required: true })}
-              className={`border py-1 px-2 rounded-md sm:w-55 ${
-                errors.zipCode && "border-red-600 focus:outline-none"
-              }`}
-            />
-            {errors.zipCode?.type === "required" && (
-              <span className="text-xs text-red-600 pt-1">
-                This field is required
-              </span>
-            )}
+            <label className={`text-sm font-bold`}>Zip Code</label>
+            <input className={`border py-1 px-2 rounded-md sm:w-55`} />
           </div>
 
           {/* Country */}
@@ -284,7 +141,6 @@ function Contact() {
           <div className="flex flex-col">
             <label className="text-sm font-bold">Country</label>
             <input
-              {...register("country")}
               className="border py-1 px-2 rounded-md sm:w-55"
               placeholder="USA"
               value="USA"
@@ -297,51 +153,7 @@ function Contact() {
 
         <div className="flex flex-col px-8 sm:px-0">
           <label className="text-sm font-bold">How can we help you?</label>
-          <textarea
-            {...register("message")}
-            className="border py-4 px-2 rounded-md"
-          />
-        </div>
-
-        <div className="flex flex-col sm:flex-row px-8 sm:px-0 gap-4 sm:justify-between">
-          {/* Type of Roof */}
-
-          <div className="flex flex-col">
-            <label
-              className={`text-sm font-bold ${
-                errors.typeOfRoof && "text-red-600"
-              }`}
-            >
-              Type of Roof*
-            </label>
-            <select
-              {...register("typeOfRoof", { required: true })}
-              className={`py-1 px-2 border rounded-md sm:w-[13.5rem] ${
-                errors.typeOfRoof && "border-red-600 focus:outline-none"
-              }`}
-              defaultValue=""
-            >
-              <option disabled value="">
-                -- select an option --
-              </option>
-              <option value="A">Type-A</option>
-              <option value="B">Type-B</option>
-              <option value="C">Type-C</option>
-              <option value="other">Other</option>
-            </select>
-            {errors.typeOfRoof?.type === "required" && (
-              <span className="text-xs text-red-600 pt-1">
-                This field is required
-              </span>
-            )}
-          </div>
-
-          {/* Begin Project */}
-
-          <div className="flex flex-col">
-            <label className="text-sm font-bold">Begin Project*</label>
-            <input name="begin" className="border py-1 px-2 rounded-md" />
-          </div>
+          <textarea className="border py-4 px-2 rounded-md" />
         </div>
 
         <div className="flex flex-col sm:flex-row px-8 sm:px-0 gap-4 sm:justify-between">
@@ -398,38 +210,6 @@ function Contact() {
               <label className="text-sm">Other</label>
             </div>
           </div>
-
-          {/* Type of Service */}
-
-          <div className="flex flex-col">
-            <label
-              className={`text-sm font-bold ${
-                errors.typeOfService && "text-red-600"
-              }`}
-            >
-              Type of Service*
-            </label>
-            <select
-              {...register("typeOfService", { required: true })}
-              className={`py-1 px-2 border rounded-md sm:w-[13.5rem] ${
-                errors.typeOfService && "border-red-600 focus:outline-none"
-              }`}
-              defaultValue=""
-            >
-              <option disabled value="">
-                -- select an option --
-              </option>
-              <option value="Residential">Residential</option>
-              <option value="Comercial">Comercial</option>
-              <option value="Maintenance">Maintenance</option>
-              <option value="other">Other</option>
-            </select>
-            {errors.typeOfService?.type === "required" && (
-              <span className="text-xs text-red-600 pt-1">
-                This field is required
-              </span>
-            )}
-          </div>
         </div>
 
         <div className="px-8 sm:px-0 flex flex-col space-y-2">
@@ -438,7 +218,6 @@ function Contact() {
           </label>
           <input
             type="file"
-            {...register("file")}
             className="
             file:px-8 file:py-2
             file:bg-[#203456]
@@ -464,7 +243,6 @@ function Contact() {
             How did you hear about us?
           </label>
           <select
-            {...register("hearAboutUs")}
             id="type-of-service"
             className="py-1 px-2 border rounded-md"
             defaultValue="default"
@@ -490,6 +268,6 @@ function Contact() {
       </form>
     </section>
   );
-}
+};
 
 export default Contact;

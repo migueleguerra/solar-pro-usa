@@ -58,9 +58,9 @@ export const Navbar = () => {
                       className={`flex px-4 py-2 ${
                         active ? "bg-[#f26622] text-white" : "text-[#203456]"
                       }`}
-                      href="comercial"
+                      href="commercial"
                     >
-                      Comercial
+                      Commercial
                     </Link>
                   )}
                 </Menu.Item>
@@ -148,7 +148,8 @@ export const Navbar = () => {
           <li>
             <div className="transform transition duration-200 hover:scale-110">
               <Link
-                href="#"
+                href="https://buy.stripe.com/eVa4hJ3f57Kh0w06oo"
+                target="_blank"
                 className="px-4 py-2 secondary-bg-color text-white rounded-md"
               >
                 Pay Service
@@ -199,9 +200,9 @@ export const Navbar = () => {
                 <Link
                   onClick={handleNav}
                   className="hover:text-orange-600"
-                  href="comercial"
+                  href="commercial"
                 >
-                  Comercial
+                  Commercial
                 </Link>
                 <Link
                   onClick={handleNav}
@@ -249,7 +250,8 @@ export const Navbar = () => {
             </li>
             <li className="p-4 text-3xl">
               <Link
-                href="#"
+                href="https://buy.stripe.com/eVa4hJ3f57Kh0w06oo"
+                target="_blank"
                 className="px-8 py-2 secondary-bg-color text-white rounded-md"
               >
                 Pay Service

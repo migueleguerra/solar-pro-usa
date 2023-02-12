@@ -83,9 +83,9 @@ const Home: NextPage = () => {
             />
             <ServiceCard
               imageUrl="https://images.unsplash.com/photo-1594818379496-da1e345b0ded?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
-              header="Comercial"
+              header="Commercial"
               message="With a large portfolio of solar-powered, commercial clients, Solar Pro has a proven track record in providing customized..."
-              linkHref="comercial"
+              linkHref="commercial"
             />
             <ServiceCard
               imageUrl="https://images.unsplash.com/photo-1660330589257-813305a4a383?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80"
