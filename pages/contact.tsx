@@ -1,7 +1,38 @@
+import { useForm } from "react-hook-form";
+
+interface FormValues {
+  firstName: string;
+  lastName: string;
+  email: string;
+  companyName: string;
+  phone: string;
+  address: string;
+  city: string;
+  state: string;
+  zipCode: string;
+  country: string;
+  helpMessage: string;
+  file: any;
+  hearAboutUs: string;
+}
+
 const Contact = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormValues>();
+
+  const onSubmit = (data: FormValues) => {
+    console.log(data);
+  };
+
   return (
     <section className="contact-wave bg-no-repeat bg-cover bg-center">
-      <form className="flex flex-col primary-font-color mx-auto max-w-2xl space-y-4 bg-white sm:shadow-lg mb-[20rem] translate-y-[10rem] sm:p-[4rem] pt-[2rem] px-2">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="flex flex-col primary-font-color mx-auto max-w-2xl space-y-4 bg-white sm:shadow-lg mb-[20rem] translate-y-[10rem] sm:p-[4rem] pt-[2rem] px-2"
+      >
         <h3 className="text-3xl font-bold text-center">Let's work together</h3>
         <p className="text-center px-4 sm:px-0">
           We'd love to hear from you! Send us a message using the form, or email
@@ -13,14 +44,36 @@ const Contact = () => {
 
           <div className="flex flex-col">
             <label className={`text-sm font-bold`}>First Name*</label>
-            <input className={`border py-1 px-2 rounded-md`} />
+            <input
+              {...register("firstName", { required: true })}
+              className={`border py-1 px-2 rounded-md ${
+                errors.firstName?.type === "required" &&
+                "focus:outline-none border-red-600"
+              }`}
+            />
+            {errors.firstName?.type === "required" && (
+              <span className="text-xs text-red-600">
+                first name is required.
+              </span>
+            )}
           </div>
 
           {/* Last Name */}
 
           <div className="flex flex-col">
             <label className={`text-sm font-bold`}>Last Name*</label>
-            <input className={`border py-1 px-2 rounded-md`} />
+            <input
+              {...register("lastName", { required: true })}
+              className={`border py-1 px-2 rounded-md ${
+                errors.lastName?.type === "required" &&
+                "focus:outline-none border-red-600"
+              }`}
+            />
+            {errors.lastName?.type === "required" && (
+              <span className="text-xs text-red-600">
+                last name is required.
+              </span>
+            )}
           </div>
         </div>
 
@@ -29,14 +82,33 @@ const Contact = () => {
 
           <div className="flex flex-col">
             <label className={`text-sm font-bold`}>Email*</label>
-            <input className={`border py-1 px-2 rounded-md`} />
+            <input
+              {...register("email", {
+                required: true,
+                pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+              })}
+              className={`border py-1 px-2 rounded-md ${
+                (errors.email?.type === "required" ||
+                  errors.email?.type === "pattern") &&
+                "focus:outline-none border-red-600"
+              }`}
+            />
+            {errors.email?.type === "required" && (
+              <span className="text-xs text-red-600">email is required.</span>
+            )}
+            {errors.email?.type === "pattern" && (
+              <span className="text-xs text-red-600">enter a valid email.</span>
+            )}
           </div>
 
           {/* Company Name */}
 
           <div className="flex flex-col">
             <label className="text-sm font-bold">Company Name</label>
-            <input className="border py-1 px-2 rounded-md" />
+            <input
+              {...register("companyName")}
+              className="border py-1 px-2 rounded-md"
+            />
           </div>
         </div>
 
@@ -44,14 +116,21 @@ const Contact = () => {
 
         <div className="flex flex-col px-8 sm:px-0">
           <label className={`text-sm font-bold`}>Phone Number</label>
-          <input className={`border py-1 px-2 rounded-md sm:w-[13.5rem]`} />
+          <input
+            {...register("phone")}
+            type="Number"
+            className={`border py-1 px-2 rounded-md sm:w-[13.5rem]`}
+          />
         </div>
 
         {/* Address */}
 
         <div className="flex flex-col px-8 sm:px-0">
           <label className={`text-sm font-bold`}>Address</label>
-          <input className={`border py-1 px-2 rounded-md`} />
+          <input
+            {...register("address")}
+            className={`border py-1 px-2 rounded-md`}
+          />
         </div>
 
         <div className="flex flex-col sm:flex-row px-8 sm:px-0 gap-4 sm:justify-between">
@@ -59,7 +138,10 @@ const Contact = () => {
 
           <div className="flex flex-col">
             <label className={`text-sm font-bold`}>City</label>
-            <input className={`border py-1 px-2 rounded-md`} />
+            <input
+              {...register("city")}
+              className={`border py-1 px-2 rounded-md`}
+            />
           </div>
 
           {/* State */}
@@ -67,6 +149,7 @@ const Contact = () => {
           <div className="flex flex-col">
             <label className={`text-sm font-bold`}>State</label>
             <select
+              {...register("state")}
               className={`py-1 px-2 border rounded-md sm:w-[13.5rem]`}
               defaultValue=""
             >
@@ -133,7 +216,10 @@ const Contact = () => {
 
           <div className="flex flex-col">
             <label className={`text-sm font-bold`}>Zip Code</label>
-            <input className={`border py-1 px-2 rounded-md sm:w-55`} />
+            <input
+              {...register("zipCode")}
+              className={`border py-1 px-2 rounded-md sm:w-55`}
+            />
           </div>
 
           {/* Country */}
@@ -141,9 +227,9 @@ const Contact = () => {
           <div className="flex flex-col">
             <label className="text-sm font-bold">Country</label>
             <input
+              {...register("country")}
               className="border py-1 px-2 rounded-md sm:w-55"
-              placeholder="USA"
-              value="USA"
+              defaultValue="USA"
               disabled
             />
           </div>
@@ -153,7 +239,10 @@ const Contact = () => {
 
         <div className="flex flex-col px-8 sm:px-0">
           <label className="text-sm font-bold">How can we help you?</label>
-          <textarea className="border py-4 px-2 rounded-md" />
+          <textarea
+            {...register("helpMessage")}
+            className="border py-4 px-2 rounded-md"
+          />
         </div>
 
         <div className="flex flex-col sm:flex-row px-8 sm:px-0 gap-4 sm:justify-between">
@@ -217,6 +306,7 @@ const Contact = () => {
             Drop your electricity bill (png, jpeg or pdf)
           </label>
           <input
+            {...register("file")}
             type="file"
             className="
             file:px-8 file:py-2
@@ -243,6 +333,7 @@ const Contact = () => {
             How did you hear about us?
           </label>
           <select
+            {...register("hearAboutUs")}
             id="type-of-service"
             className="py-1 px-2 border rounded-md"
             defaultValue="default"

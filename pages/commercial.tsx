@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { CallToAction } from "../components/CallToAction";
 import { HeroServices } from "../components/HeroServices";
 import { VideoSection } from "../components/VideoSection";
 
