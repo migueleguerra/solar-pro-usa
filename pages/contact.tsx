@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import PhoneInput from "react-phone-number-input/react-hook-form";
 
 interface FormValues {
   firstName: string;
@@ -12,6 +13,7 @@ interface FormValues {
   zipCode: string;
   country: string;
   helpMessage: string;
+  proyectType: string;
   file: any;
   hearAboutUs: string;
 }
@@ -20,12 +22,28 @@ const Contact = () => {
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors },
   } = useForm<FormValues>();
 
-  const onSubmit = (data: FormValues) => {
-    console.log(data);
+  const onSubmit = async (formData: FormValues) => {
+    await toBase64(formData.file[0]).then((x) => (formData.file = x));
+
+    fetch("/api/mail", {
+      method: "post",
+      body: JSON.stringify(formData),
+    });
   };
+
+  const toBase64 = (file: File) =>
+    new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => {
+        resolve((reader.result || "").toString().replace(/^data:(.*,)?/, ""));
+      };
+      reader.onerror = (error) => reject(error);
+    });
 
   return (
     <section className="contact-wave bg-no-repeat bg-cover bg-center">
@@ -116,10 +134,12 @@ const Contact = () => {
 
         <div className="flex flex-col px-8 sm:px-0">
           <label className={`text-sm font-bold`}>Phone Number</label>
-          <input
-            {...register("phone")}
-            type="Number"
-            className={`border py-1 px-2 rounded-md sm:w-[13.5rem]`}
+          <PhoneInput
+            defaultCountry="US"
+            initialValueFormat="national"
+            name="phone"
+            control={control}
+            className={`border py-1 px-2 rounded-md sm:w-[13.5rem] primary-font-color`}
           />
         </div>
 
@@ -252,7 +272,8 @@ const Contact = () => {
             <label className="text-sm font-bold">Proyect type*</label>
             <div className="flex items-center space-x-2">
               <input
-                name="checkbox-solar"
+                {...register("proyectType", { required: true })}
+                value="Solar Only"
                 className="w-4 h-4"
                 type="checkbox"
               />
@@ -260,7 +281,8 @@ const Contact = () => {
             </div>
             <div className="flex items-center space-x-2">
               <input
-                name="checkbox-storage&solar"
+                {...register("proyectType", { required: true })}
+                value="Storage and Solar"
                 className="w-4 h-4"
                 type="checkbox"
               />
@@ -268,7 +290,8 @@ const Contact = () => {
             </div>
             <div className="flex items-center space-x-2">
               <input
-                name="checkbox-roofing&solar"
+                {...register("proyectType", { required: true })}
+                value="Roofing and Solar"
                 className="w-4 h-4"
                 type="checkbox"
               />
@@ -276,7 +299,8 @@ const Contact = () => {
             </div>
             <div className="flex items-center space-x-2">
               <input
-                name="checkbox-roofing"
+                {...register("proyectType", { required: true })}
+                value="Roofing"
                 className="w-4 h-4"
                 type="checkbox"
               />
@@ -284,7 +308,8 @@ const Contact = () => {
             </div>
             <div className="flex items-center space-x-2">
               <input
-                name="checkbox-storage"
+                {...register("proyectType", { required: true })}
+                value="Storage"
                 className="w-4 h-4"
                 type="checkbox"
               />
@@ -292,12 +317,18 @@ const Contact = () => {
             </div>
             <div className="flex items-center space-x-2">
               <input
-                name="checkbox-other"
+                {...register("proyectType", { required: true })}
+                value="Other"
                 className="w-4 h-4"
                 type="checkbox"
               />
               <label className="text-sm">Other</label>
             </div>
+            {errors.proyectType?.type === "required" && (
+              <span className="text-xs text-red-600">
+                select at least one option.
+              </span>
+            )}
           </div>
         </div>
 
@@ -336,9 +367,9 @@ const Contact = () => {
             {...register("hearAboutUs")}
             id="type-of-service"
             className="py-1 px-2 border rounded-md"
-            defaultValue="default"
+            defaultValue=""
           >
-            <option disabled value="default">
+            <option disabled value="">
               -- select an option --
             </option>
             <option value="google">Google</option>
