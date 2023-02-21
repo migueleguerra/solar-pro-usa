@@ -1,5 +1,8 @@
+import { redirect } from "next/navigation";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import PhoneInput from "react-phone-number-input/react-hook-form";
+import FormLoading from "../components/FormLoading";
 
 interface FormValues {
   firstName: string;
@@ -23,16 +26,35 @@ const Contact = () => {
     register,
     handleSubmit,
     control,
+    reset,
     formState: { errors },
   } = useForm<FormValues>();
+  let [loading, setLoading] = useState(false);
 
   const onSubmit = async (formData: FormValues) => {
+    setLoading(true);
     await toBase64(formData.file[0]).then((x) => (formData.file = x));
 
     fetch("/api/mail", {
-      method: "post",
+      method: "POST",
+      headers: {
+        "Content-Type": "Application/json",
+      },
       body: JSON.stringify(formData),
-    });
+    })
+      .then((res) => {
+        reset;
+        setLoading(false);
+        if (!res.ok) {
+          redirect("/errorform");
+        }
+        redirect("/successform");
+      })
+      .catch((err) => {
+        setLoading(false);
+        console.log(err);
+        redirect("/errorform");
+      });
   };
 
   const toBase64 = (file: File) =>
@@ -388,6 +410,8 @@ const Contact = () => {
           </button>
         </div>
       </form>
+
+      {loading ? <FormLoading /> : null}
     </section>
   );
 };
