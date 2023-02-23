@@ -25,7 +25,7 @@ export const CallToAction = ({
         {button ? (
           <div className="transform transition duration-200 hover:scale-110">
             <Link
-              href="#"
+              href="/financing"
               className="px-8 py-3 bg-white primary-font-color font-bold rounded-md"
             >
               Finance Available

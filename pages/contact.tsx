@@ -1,4 +1,4 @@
-import { redirect } from "next/navigation";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import PhoneInput from "react-phone-number-input/react-hook-form";
@@ -16,12 +16,17 @@ interface FormValues {
   zipCode: string;
   country: string;
   helpMessage: string;
+  financing: boolean;
   proyectType: string;
   file: any;
+  fileName: string;
+  fileType: string;
   hearAboutUs: string;
+  form: string;
 }
 
 const Contact = () => {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -29,31 +34,42 @@ const Contact = () => {
     reset,
     formState: { errors },
   } = useForm<FormValues>();
-  let [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const onSubmit = async (formData: FormValues) => {
     setLoading(true);
-    await toBase64(formData.file[0]).then((x) => (formData.file = x));
+    formData.form = "fullContact";
+
+    if (formData.file[0]) {
+      formData.fileName = formData.file[0].name;
+      formData.fileType = formData.file[0].type;
+      await toBase64(formData.file[0])
+        .then((x) => (formData.file = x))
+        .catch((err) => {
+          setLoading(false);
+          console.error(err);
+        });
+    } else {
+      formData.file = false;
+    }
 
     fetch("/api/mail", {
       method: "POST",
-      headers: {
-        "Content-Type": "Application/json",
-      },
       body: JSON.stringify(formData),
     })
       .then((res) => {
-        reset;
         setLoading(false);
+        reset();
         if (!res.ok) {
-          redirect("/errorform");
+          return router.push("/errorform");
         }
-        redirect("/successform");
+        router.push("/successform");
       })
       .catch((err) => {
         setLoading(false);
-        console.log(err);
-        redirect("/errorform");
+        console.error(err);
+        reset();
+        router.push("/errorform");
       });
   };
 
@@ -74,10 +90,7 @@ const Contact = () => {
         className="flex flex-col primary-font-color mx-auto max-w-2xl space-y-4 bg-white sm:shadow-lg mb-[20rem] translate-y-[10rem] sm:p-[4rem] pt-[2rem] px-2"
       >
         <h3 className="text-3xl font-bold text-center">Let's work together</h3>
-        <p className="text-center px-4 sm:px-0">
-          We'd love to hear from you! Send us a message using the form, or email
-          us.
-        </p>
+        <p className="text-center px-4 sm:px-0">We'd love to hear from you!</p>
 
         <div className="flex flex-col sm:flex-row px-8 sm:px-0 gap-4 sm:justify-between">
           {/* First Name */}
@@ -283,7 +296,20 @@ const Contact = () => {
           <label className="text-sm font-bold">How can we help you?</label>
           <textarea
             {...register("helpMessage")}
-            className="border py-4 px-2 rounded-md"
+            className="border h-[5rem] p-2 rounded-md"
+          />
+        </div>
+
+        {/* Financing? */}
+
+        <div className="flex space-x-2 px-8 sm:px-0">
+          <label className="text-sm font-bold">
+            Are you interested in financing?
+          </label>
+          <input
+            {...register("financing")}
+            type="checkbox"
+            className="w-4 h-4"
           />
         </div>
 
@@ -394,13 +420,13 @@ const Contact = () => {
             <option disabled value="">
               -- select an option --
             </option>
-            <option value="google">Google</option>
-            <option value="word of mouth">Word of Mouth</option>
-            <option value="facebook">Facebook</option>
-            <option value="instagram">Instagram</option>
-            <option value="blog post">Blog Post</option>
-            <option value="in person event">In-Person Events</option>
-            <option value="other">other</option>
+            <option value="Google">Google</option>
+            <option value="Word of Mouth">Word of Mouth</option>
+            <option value="Facebook">Facebook</option>
+            <option value="Instagram">Instagram</option>
+            <option value="Blog Post">Blog Post</option>
+            <option value="In-Person Event">In-Person Events</option>
+            <option value="Other">other</option>
           </select>
         </div>
 

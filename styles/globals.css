@@ -136,6 +136,10 @@ html {
   background-image: url(../public/waves/contact-wave.svg);
 }
 
+.financing-wave {
+  background-image: url(../public/waves/financing-wave.svg);
+}
+
 .dots {
   background-image: url(../public/dots.svg);
 }

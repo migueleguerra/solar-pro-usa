@@ -13,7 +13,7 @@ function successform() {
         </h2>
       </div>
       <h3 className="text-lg font-semibold pb-[4rem]">
-        One of all representatives will be in touch with you shortly.
+        One of our representatives will be in touch with you shortly.
       </h3>
       <div className="transform transition duration-200 hover:scale-110">
         <Link
