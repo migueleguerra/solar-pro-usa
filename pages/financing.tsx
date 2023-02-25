@@ -40,7 +40,7 @@ const houseSizeTypes = {
     twentyYearsAmount: "$ 224.63",
     twentyFiveYearsAmount: "$ 206.63",
   } as HouseValues,
-  big: {
+  large: {
     monthlyUtilityPayments: "$ 350.00",
     monthlyConsumtion: "2500",
     systemSize: "20",
@@ -66,8 +66,8 @@ function financing() {
       case "medium":
         setHouseType(houseSizeTypes.medium);
         break;
-      case "big":
-        setHouseType(houseSizeTypes.big);
+      case "large":
+        setHouseType(houseSizeTypes.large);
         break;
       default:
         setHouseType(houseSizeTypes.small);
@@ -106,7 +106,10 @@ function financing() {
           </p>
           <p className="text-sm">
             By using our financial simulation tool, you agree to the{" "}
-            <Link className="secondary-font-color font-bold" href="#">
+            <Link
+              className="secondary-font-color font-bold"
+              href="/privacypolicy"
+            >
               terms of this policy
             </Link>
             .
@@ -120,7 +123,7 @@ function financing() {
             >
               <option value="small">Small Size House</option>
               <option value="medium">Medium Size House</option>
-              <option value="big">Big Size House</option>
+              <option value="large">Large Size House</option>
             </select>
           </div>
 
