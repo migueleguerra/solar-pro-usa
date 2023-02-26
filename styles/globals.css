@@ -164,7 +164,7 @@ html {
   background-position: center;
 }
 
-video::slotted::-webkit-media-controls-container {
+video::-webkit-media-controls-container {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
