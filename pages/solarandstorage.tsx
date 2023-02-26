@@ -53,27 +53,29 @@ const SolarAndStorage = () => {
           </div>
           <div className="flex flex-col space-y-4">
             <div>
-              <p className="font-bold">A complete solar system</p>
+              <p className="font-bold">Complete Solar system</p>
               <p>
-                A complete solar system engineered for maximum performance that
-                is fully warranted by CertainTeed
+                Solar pro provides you a complete and customized solar system
+                design. From shingles to panels to batteries our Engineers
+                create a top of line solar system to tailor your individual
+                energy needs
               </p>
             </div>
             <div>
-              <p className="font-bold">A CertainTeed installation warranty</p>
+              <p className="font-bold">Solar Pro Installation</p>
               <p>
-                A CertainTeed installation warranty, which provides coverage on
-                the installer's workmanship for up to 25 years when the Solstice
-                system is installed by a CertainTeed-credentialed solar
-                installer
+                Each Solar Pro installation comes with a power production
+                warranty and a no leak guarantee. Since we are licensed roofers
+                and solar installers we bring you the best of both worlds with a
+                warranty that is safe and backed by our manufacturers
               </p>
             </div>
             <div>
-              <p className="font-bold">State-of-the-art flashing system</p>
+              <p className="font-bold">State of the art solar system:</p>
               <p>
-                State-of-the-art flashing system that weatherproofs the
-                penetrations in your roof, selected by a roofing manufacturer
-                with more than a century of roofing experience
+                by working with the top household solar brands our work is not
+                only backed by us but also the leading manufacturers in the
+                industry
               </p>
             </div>
           </div>

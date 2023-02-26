@@ -27,29 +27,7 @@ const solarSystems = () => {
       {/* boucher section */}
 
       <section className="col-[full-start/full-end] container what-you-get-wave bg-no-repeat bg-cover">
-        <div className="md:col-[center-start/center-end] col-[full-start/full-end] px-[2rem] grid lg:grid-cols-2 gap-[4rem] primary-font-color py-[4rem]">
-          <div className="flex flex-col items-start space-y-4 text-lg">
-            <h3 className="text-3xl font-bold">
-              What <span className="secondary-font-color">you get</span>
-            </h3>
-            <p>
-              CertainTeed's Solstice solar system combines the efficiency and
-              affordability of traditional solar products with the unique value
-              of CertainTeed's comprehensive warranty, which covers the full
-              system, as well as its professional installation, for up to 25
-              years. We've selected the highest quality system components and
-              paired them with our solar modules for a seamless solar
-              experience.
-            </p>
-            <div className="transform transition duration-200 hover:scale-110">
-              <Link
-                className="px-8 py-2 secondary-bg-color text-white rounded-md"
-                href=""
-              >
-                View Brochure
-              </Link>
-            </div>
-          </div>
+        <div className="md:col-[center-start/center-end] col-[full-start/full-end] px-[2rem] primary-font-color py-[4rem]">
           <div className="flex flex-col space-y-4">
             <div>
               <p className="font-bold">Beauty</p>
@@ -101,7 +79,7 @@ const solarSystems = () => {
 
       <section className="col-[full-start/full-end] container whats-included-wave bg-no-repeat bg-cover">
         <div className="col-[full-start/full-end] md:col-[center-start/center-end]">
-          <div className="flex flex-col lg:m-[8rem] mx-[2rem] my-[4rem] space-y-[1rem] primary-font-color shadow-xl rounded-md md:p-[4rem] p-[2rem] bg-white">
+          <div className="flex flex-col lg:m-[8rem] mx-[2rem] mt-[4rem] space-y-[1rem] primary-font-color shadow-xl rounded-md md:p-[4rem] p-[2rem] bg-white">
             <p className="secondary-font-color text-xl font-bold uppercase text-center pb-[2rem]">
               What's included
             </p>
@@ -138,14 +116,6 @@ const solarSystems = () => {
             <div className="flex justify-between sm:text-base text-sm pb-[2rem]">
               <p>Master Solar Installer</p>
               <p className="md:mr-[3rem]">25 Years</p>
-            </div>
-            <div className="flex justify-center transform transition duration-200 hover:scale-110">
-              <Link
-                className="py-3 w-[95%] secondary-bg-color text-white rounded-md font-semibold text-center"
-                href="contact"
-              >
-                View Warranty
-              </Link>
             </div>
           </div>
         </div>

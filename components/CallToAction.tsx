@@ -15,7 +15,7 @@ export const CallToAction = ({
 }: CallToActionParams) => {
   return (
     <div className="gray-blue-bg-color sm:rounded-lg call-to-action-wave bg-no-repeat bg-center bg-cover">
-      <div className="flex flex-col p-8 md:p-[4rem] text-white items-center space-y-4 text-center">
+      <div className="flex flex-col py-[4rem] px-[2rem] md:px-0 text-white items-center space-y-4 text-center">
         <div className="flex flex-col text-2xl font-bold space-x-2">
           <h3>
             {header} <span className="secondary-font-color">{headerColor}</span>
