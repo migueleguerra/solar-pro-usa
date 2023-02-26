@@ -22,8 +22,7 @@ export const Hero = () => {
         </div>
       </div>
       <video
-        className="absolute object-cover h-full z-[-1]"
-        poster="https://images.unsplash.com/flagged/photo-1566838634698-48b165cb0a9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        className="video absolute object-cover h-full z-[-1]"
         autoPlay
         muted
         loop
