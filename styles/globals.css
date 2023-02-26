@@ -140,6 +140,10 @@ html {
   background-image: url(../public/waves/financing-wave.svg);
 }
 
+.aboutus-wave {
+  background-image: url(../public/waves/aboutus-wave.svg);
+}
+
 .dots {
   background-image: url(../public/dots.svg);
 }
