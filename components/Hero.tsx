@@ -21,12 +21,7 @@ export const Hero = () => {
           </Link>
         </div>
       </div>
-      <video
-        className="video absolute object-cover h-full z-[-1] hero-video"
-        autoPlay
-        muted
-        loop
-      >
+      <video className="video absolute object-cover h-full z-[-1]" muted loop>
         <source src="hero/hero-mp4.mp4" type="video/mp4" />
         <source src="hero/hero-webm.webm" type="video/webm" />
       </video>
