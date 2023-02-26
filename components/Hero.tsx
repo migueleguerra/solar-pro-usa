@@ -1,6 +1,18 @@
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 export const Hero = () => {
+  const ref = useRef();
+  useEffect(() => {
+    ref &&
+      ref.current
+        .play()
+        .then(() => {})
+        .catch((err: any) => {
+          console.log(err);
+        });
+  }, []);
+
   return (
     <header className="col-[full-start/full-end] flex justify-start items-center h-screen relative overflow-hidden custom-img-gradient">
       <div className="sm:w-[30rem] xl:ml-[12rem] md:ml-[6rem] md:px-0 px-[2rem]">
@@ -22,8 +34,8 @@ export const Hero = () => {
         </div>
       </div>
       <video
+        ref={ref}
         className="video absolute object-cover h-full z-[-1]"
-        autoPlay
         muted
         loop
       >

@@ -163,14 +163,3 @@ html {
   background-size: cover;
   background-position: center;
 }
-
-video::-webkit-media-controls-container {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  -webkit-appearance: none !important;
-}
-
-video::-webkit-media-controls-overlay-play-button {
-  display: none;
-}
