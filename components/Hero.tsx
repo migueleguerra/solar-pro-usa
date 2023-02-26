@@ -1,20 +1,18 @@
 import Link from "next/link";
 
-interface HeroParams {
-  heading: string;
-  headingColor: string;
-  message: string;
-}
-
-export const Hero = ({ heading, headingColor, message }: HeroParams) => {
+export const Hero = () => {
   return (
     <header className="grid col-[full-start/full-end] relative items-center h-screen bg-fixed bg-center bg-cover custom-img">
       <div className="absolute inset-0 custom-img-gradient" />
       <div className="w-full p-10 z-[1] xl:pl-[12rem] lg:w-1/2 md:w-3/4 md:pl-[6rem]">
         <h1 className="text-5xl font-bold primary-font-color">
-          {heading} <span className="secondary-font-color">{headingColor}</span>
+          The time for <span className="secondary-font-color">solar</span> is
+          now
         </h1>
-        <p className="py-5 text-xl font-normal primary-font-color">{message}</p>
+        <p className="py-5 text-xl font-normal primary-font-color">
+          Here at Solar Pro, we thrive on providing innovative solutions to our
+          customers
+        </p>
         <div className="transform transition duration-200 hover:scale-110 hover:translate-x-5">
           <Link
             href="contact"

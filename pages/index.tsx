@@ -17,11 +17,7 @@ const Home: NextPage = () => {
 
       {/* Hero section */}
 
-      <Hero
-        heading="The time is now for "
-        headingColor="Solar"
-        message="Here at Solar Pro, we thrive on providing innovative solutions to our customers"
-      />
+      <Hero />
 
       {/* Buisness Goals section */}
 
