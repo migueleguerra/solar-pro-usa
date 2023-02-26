@@ -164,10 +164,9 @@ html {
   background-position: center;
 }
 
-video::-webkit-media-controls-start-playback-button {
+video::slotted::-webkit-media-controls-container {
   display: none !important;
-}
-
-video::-webkit-media-controls {
-  opacity: 0;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  -webkit-appearance: none !important;
 }
