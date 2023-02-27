@@ -23,7 +23,7 @@ export const VideoSection = () => {
       <div className="w-full h-[25rem] lg:h-full flex flex-col justify-center">
         <iframe
           className="w-full h-[80%] rounded-xl shadow-md"
-          src="https://www.youtube.com/embed/sM4eAo3vNR8"
+          src="https://www.youtube.com/embed/gIRYTvHQQI0"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         ></iframe>
