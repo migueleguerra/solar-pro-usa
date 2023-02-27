@@ -2,15 +2,10 @@ import Link from "next/link";
 import { useEffect, useRef } from "react";
 
 export const Hero = () => {
-  const ref = useRef();
+  const videoRef = useRef<HTMLVideoElement>(null);
+
   useEffect(() => {
-    ref &&
-      ref.current
-        .play()
-        .then(() => {})
-        .catch((err: any) => {
-          console.log(err);
-        });
+    videoRef?.current?.play();
   }, []);
 
   return (
@@ -34,10 +29,10 @@ export const Hero = () => {
         </div>
       </div>
       <video
-        ref={ref}
         className="video absolute object-cover h-full z-[-1]"
         muted
         loop
+        ref={videoRef}
       >
         <source src="hero/hero-mp4.mp4" type="video/mp4" />
         <source src="hero/hero-webm.webm" type="video/webm" />
