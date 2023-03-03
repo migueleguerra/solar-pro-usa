@@ -114,7 +114,7 @@ function financing() {
             </Link>
             .
           </p>
-          <div className="flex flex-col mb-[2rem]">
+          <div className="flex flex-col space-y-2 mb-[2rem]">
             <label className="font-semibold">Choose residential size:</label>
             <select
               className="py-1 px-2 border w-[13rem] rounded-md primary-font-color"
@@ -130,7 +130,7 @@ function financing() {
           <div className="text-sm">
             {/* Information table */}
 
-            <table className="rounded-t-md rounded-b-md overflow-hidden mb-[2rem] shadow-md">
+            <table className="rounded-t-md rounded-b-md overflow-hidden mb-[4rem] shadow-md">
               <thead>
                 <tr>
                   <th className="p-2 primary-bg-color border border-white text-white font-semibold">
@@ -195,7 +195,7 @@ function financing() {
 
             {/* Payment table */}
 
-            <table className="rounded-t-md rounded-b-md overflow-hidden shadow-md">
+            <table className="rounded-t-md rounded-b-md overflow-hidden shadow-md mb-[4rem]">
               <thead>
                 <tr>
                   <th className="p-2 primary-bg-color border border-white text-white">

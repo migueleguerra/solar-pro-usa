@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export const VideoSection = () => {
   return (
-    <div className="grid lg:grid-cols-2 lg:gap-4 md:px-0 px-8">
-      <div className="flex flex-col justify-center items-start primary-font-color h-[25rem] space-y-[1rem]">
+    <div className="grid lg:grid-cols-2 lg:gap-8 gap-12 md:px-0 px-8">
+      <div className="flex flex-col justify-center items-start primary-font-color lg:h-[25rem] space-y-[1rem]">
         <p className="text-xl">Hey you!</p>
         <h3 className="text-3xl font-bold">
           Contact Us for more{" "}

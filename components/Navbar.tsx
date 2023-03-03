@@ -190,14 +190,14 @@ export const Navbar = () => {
                 />
               </Link>
             </li>
-            <li className="p-4 text-4xl hover:text-orange-600">
+            <li className="p-5 text-4xl hover:text-orange-600 font-semibold">
               <Link onClick={handleNav} href="aboutus">
                 About Us
               </Link>
             </li>
 
-            <Menu as="li" className="relative p-4">
-              <Menu.Button className="text-4xl hover:text-orange-600 flex gap-4 items-center">
+            <Menu as="li" className="relative p-5">
+              <Menu.Button className="text-4xl hover:text-orange-600 flex gap-4 items-center font-semibold">
                 Services
                 <MdOutlineKeyboardArrowDown />
               </Menu.Button>
@@ -252,8 +252,8 @@ export const Navbar = () => {
               </Transition>
             </Menu>
 
-            <Menu as="li" className="relative p-4 mb-[1rem]">
-              <Menu.Button className="text-4xl hover:text-orange-600 flex gap-4 items-center">
+            <Menu as="li" className="relative p-5 mb-[1rem]">
+              <Menu.Button className="text-4xl hover:text-orange-600 flex gap-4 items-center font-semibold">
                 Systems
                 <MdOutlineKeyboardArrowDown />
               </Menu.Button>
@@ -308,7 +308,7 @@ export const Navbar = () => {
               </Transition>
             </Menu>
 
-            <li className="p-4 text-3xl mb-[1rem]">
+            <li className="p-5 text-3xl mb-[1rem]">
               <Link
                 onClick={handleNav}
                 href="contact"
@@ -317,7 +317,7 @@ export const Navbar = () => {
                 Contact Us
               </Link>
             </li>
-            <li className="p-4 text-3xl">
+            <li className="p-5 text-3xl">
               <Link
                 href="https://buy.stripe.com/eVa4hJ3f57Kh0w06oo"
                 target="_blank"

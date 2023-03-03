@@ -51,8 +51,8 @@ const Home: NextPage = () => {
             />
             <MainCard
               imgSrc="wallet.svg"
-              header="Save Money"
-              message="Generate your own energy and save. Take advantage of the solar incentives to achieve a quick ROI"
+              header="Financial Gain"
+              message="Generate your own energy and save. Take advantage of the solar incentives to achieve a quick return on investment (ROI)"
             />
             <MainCard
               imgSrc="eco.svg"
@@ -70,7 +70,7 @@ const Home: NextPage = () => {
           Our Services
         </h2>
         <div>
-          <div className="grid lg:grid-cols-3 gap-8 sm:gap-4 px-8 lg:px-0">
+          <div className="grid lg:grid-cols-3 gap-12 xl:gap-6 lg:gap-4 px-8 lg:px-0">
             <ServiceCard
               imageUrl="https://images.unsplash.com/flagged/photo-1566838803980-56bfa5300e8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
               header="Residential"
@@ -103,7 +103,7 @@ const Home: NextPage = () => {
         />
       </div>
 
-      <section className="col-[full-start/full-end] pt-[15rem] pb-[5rem] container text-center feedback-wave bg-no-repeat bg-center bg-cover">
+      <section className="col-[full-start/full-end] pt-[14rem] pb-[4rem] container text-center feedback-wave bg-no-repeat bg-center bg-cover">
         <div className="grid col-[full-start/full-end] md:col-[center-start/center-end] px-8 md:px-0 gap-8">
           <h2 className="text-3xl primary-font-color font-bold">
             Our Clients Speak

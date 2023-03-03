@@ -77,7 +77,7 @@ const solarSystems = () => {
 
       {/* What Includes */}
 
-      <section className="col-[full-start/full-end] container whats-included-wave bg-no-repeat bg-cover">
+      <section className="col-[full-start/full-end] container whats-included-wave bg-no-repeat bg-cover pb-[2rem]">
         <div className="col-[full-start/full-end] md:col-[center-start/center-end]">
           <div className="flex flex-col lg:m-[8rem] mx-[2rem] mt-[4rem] space-y-[1rem] primary-font-color shadow-xl rounded-md md:p-[4rem] p-[2rem] bg-white">
             <p className="secondary-font-color text-xl font-bold uppercase text-center pb-[2rem]">
@@ -89,12 +89,12 @@ const solarSystems = () => {
             </div>
             <hr className="col-[center-start/center-end] row-start-3 gray-bg-color my-[2rem]" />
             <div className="flex justify-between sm:text-base text-sm">
-              <p>Solar Module Power Output*</p>
+              <p>Solar Module Power Output</p>
               <p className="md:mr-[3rem]">25 Years</p>
             </div>
             <hr className="col-[center-start/center-end] row-start-3 gray-bg-color my-[2rem]" />
             <div className="flex justify-between sm:text-base text-sm">
-              <p>Microinverters and DC Optimizers**</p>
+              <p>Microinverters and DC Optimizers</p>
               <p className="md:mr-[3rem]">25 years</p>
             </div>
             <hr className="col-[center-start/center-end] row-start-3 gray-bg-color my-[2rem]" />
@@ -109,7 +109,7 @@ const solarSystems = () => {
             </div>
             <hr className="col-[center-start/center-end] row-start-3 gray-bg-color my-[2rem]" />
             <div className="flex justify-between sm:text-base text-sm">
-              <p>DC Optimized Inverter**</p>
+              <p>DC Optimized Inverter</p>
               <p className="md:mr-[3rem]">12 Years</p>
             </div>
             <hr className="col-[center-start/center-end] row-start-3 gray-bg-color my-[2rem]" />

@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { HeroServices } from "../components/HeroServices";
-import Link from "next/link";
 import { CallToAction } from "../components/CallToAction";
 import { WarrantyDetails } from "../components/systems/WarrantyDetails";
 import { VideoSection } from "../components/VideoSection";
@@ -20,7 +19,7 @@ const ShinglesAndTiles = () => {
           imageUrl="https://images.unsplash.com/flagged/photo-1566838616631-f2618f74a6a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80"
           heading="Apollo III"
           headingColor="Solar System"
-          message="The Apollo II solar roofing system packs sleek yet powerful solar energy production into a low-profile roofing system. Featuring solar shingles that are capable of being installed with either a new or existing asphalt shingle roof, an Apollo II system offers clean energy without the bulky look of racks and panels"
+          message="The Apollo II solar roofing system packs sleek yet powerful solar energy production into a low-profile roofing system. Featuring solar shingles that can be installed with a new OR existing asphalt shingle roof, the Apollo II system offers clean energy without the bulky look of racks and panels"
         />
       </section>
 
@@ -33,21 +32,22 @@ const ShinglesAndTiles = () => {
               What <span className="secondary-font-color">you get</span>
             </h3>
             <p>
-              The Apollo II solar roofing combined beauty with efficiency and
+              The Apollo II solar roofing combines beauty with efficiency and
               durability.
             </p>
             <p>
-              Even though this all-black solar shingles or tiles blends into
-              your roofline and provide a clean aesthetic, will also withstand
-              all type of heavy weather with a 100% leakproof warranty.
+              These all-black solar shingles and tiles not only blend into your
+              roof line and provide a clean aesthetic, but also withstand all
+              types of heavy weather with a 100% leakproof warranty.
             </p>
             <div className="transform transition duration-200 hover:scale-110">
-              <Link
+              <a
                 className="px-8 py-2 secondary-bg-color text-white rounded-md"
-                href=""
+                href="files/Apollo-Tile-II-TDS-73W-e-2208ctr.pdf"
+                target="_blank"
               >
                 View Brochure
-              </Link>
+              </a>
             </div>
           </div>
           <div className="flex flex-col space-y-4">
@@ -78,8 +78,8 @@ const ShinglesAndTiles = () => {
             <div>
               <p className="font-bold">Lightweight</p>
               <p>
-                The Apollo II system weighs about as many pounds per square foot
-                as a typical asphalt shingle roof.
+                The Apollo II system weighs about as much per square foot as a
+                typical asphalt shingle roof.
               </p>
             </div>
           </div>
@@ -99,7 +99,7 @@ const ShinglesAndTiles = () => {
       <section className="col-[full-start/full-end] md:col-[center-start/center-end] py-[4rem]">
         <WarrantyDetails
           heading="Warranty Details"
-          message="Considering that you should expect your solar system to generate electricity 25 years or more, it is important to take the time to understand your warranty options, and how CertainTeed protects your purchase with our comprehensive solar warranty. Here are a few things to consider"
+          message="Considering that you should expect your solar system to generate electricity for 25 years or more, it is important to take the time to understand your warranty options and how CertainTeed protects your purchase with our comprehensive solar warranty. Here are a few things to consider"
         />
       </section>
 
@@ -112,27 +112,29 @@ const ShinglesAndTiles = () => {
               What's included
             </p>
             <div className="flex justify-between font-bold sm:text-base text-sm">
-              <p>APOLLO II WARRANTY</p>
+              <p className="max-w-[14rem]">APOLLO II WARRANTY</p>
               <p className="md:mr-[2rem]">COVERAGE</p>
             </div>
             <hr className="col-[center-start/center-end] row-start-3 gray-bg-color my-[2rem]" />
             <div className="flex justify-between sm:text-base text-sm">
-              <p>Solar Shingle Power Output*</p>
+              <p className="max-w-[14rem]">Solar Shingle Power Output</p>
               <p className="md:mr-[3rem]">25 Years</p>
             </div>
             <hr className="col-[center-start/center-end] row-start-3 gray-bg-color my-[2rem]" />
             <div className="flex justify-between sm:text-base text-sm">
-              <p>Inverter**</p>
+              <p className="max-w-[14rem]">Inverter</p>
               <p className="md:mr-[3rem]">10 years</p>
             </div>
             <hr className="col-[center-start/center-end] row-start-3 gray-bg-color my-[2rem]" />
             <div className="flex justify-between sm:text-base text-sm">
-              <p>All other components supplied by CertainTeed</p>
+              <p className="max-w-[14rem]">
+                All other components supplied by CertainTeed
+              </p>
               <p className="md:mr-[3rem]">25 Years</p>
             </div>
             <hr className="col-[center-start/center-end] row-start-3 gray-bg-color my-[2rem]" />
             <div className="flex justify-between sm:text-base text-sm">
-              <p>110 mph wind warranty</p>
+              <p className="max-w-[14rem]">110 mph wind warranty</p>
               <p className="md:mr-[3rem]">10 Years</p>
             </div>
             <hr className="col-[center-start/center-end] row-start-3 gray-bg-color my-[2rem]" />
@@ -145,21 +147,22 @@ const ShinglesAndTiles = () => {
             </div>
             <hr className="col-[center-start/center-end] row-start-3 gray-bg-color my-[2rem]" />
             <div className="flex justify-between sm:text-base text-sm">
-              <p>Credentialed Solar Installer</p>
+              <p className="max-w-[14rem]">Credentialed Solar Installer</p>
               <p className="md:mr-[3rem]">15 Years</p>
             </div>
             <hr className="col-[center-start/center-end] row-start-3 gray-bg-color my-[2rem]" />
             <div className="flex justify-between sm:text-base text-sm pb-[2rem]">
-              <p>Master Solar Installer</p>
+              <p className="max-w-[14rem]">Master Solar Installer</p>
               <p className="md:mr-[3rem]">25 Years</p>
             </div>
             <div className="flex justify-center transform transition duration-200 hover:scale-110">
-              <Link
+              <a
                 className="py-3 w-[95%] secondary-bg-color text-white rounded-md font-semibold text-center"
-                href="contact"
+                href="files/solarwarranty.pdf"
+                target="_blank"
               >
                 View Warranty
-              </Link>
+              </a>
             </div>
           </div>
         </div>

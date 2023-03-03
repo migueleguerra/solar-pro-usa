@@ -28,7 +28,7 @@ export const CallToAction = ({
               href="/financing"
               className="px-8 py-3 bg-white primary-font-color font-bold rounded-md"
             >
-              Finance Available
+              Financing Available
             </Link>
           </div>
         ) : (
