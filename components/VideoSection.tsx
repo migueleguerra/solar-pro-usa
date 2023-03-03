@@ -26,7 +26,7 @@ export const VideoSection = () => {
           src="https://www.youtube.com/embed/wjeIQBQQ1p8"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        ></iframe>
+        />
       </div>
     </div>
   );
