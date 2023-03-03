@@ -90,7 +90,9 @@ const Contact = () => {
         className="flex flex-col primary-font-color mx-auto max-w-2xl space-y-4 bg-white sm:shadow-lg mb-[20rem] translate-y-[10rem] sm:p-[4rem] pt-[2rem] px-2"
       >
         <h3 className="text-3xl font-bold text-center">Let's work together</h3>
-        <p className="text-center px-4 sm:px-0">We'd love to hear from you!</p>
+        <p className="text-center pb-[2rem] px-4 sm:px-0">
+          We'd love to hear from you!
+        </p>
 
         <div className="flex flex-col sm:flex-row px-8 sm:px-0 gap-4 sm:justify-between">
           {/* First Name */}

@@ -49,7 +49,9 @@ function quickContact() {
     <section className="contact-wave bg-no-repeat bg-cover bg-center primary-font-color h-screen">
       <div className="translate-y-[10rem] flex flex-col max-w-2xl mx-auto bg-white shadow-md sm:p-[4rem] p-[2rem]">
         <h3 className="text-3xl font-bold text-center">Let's work together</h3>
-        <p className="text-center px-4 sm:px-0">We'd love to hear from you!</p>
+        <p className="text-center pb-[2rem] px-4 sm:px-0">
+          We'd love to hear from you!
+        </p>
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col space-y-4"
